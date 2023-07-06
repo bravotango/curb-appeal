@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import Header from './components/Header';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Dashboard from './components/pages/Dashboard';
+import Services from './components/pages/Services';
+import Contact from './components/pages/Contact';
+import NotFound from './components/pages/NotFound';
 
 function App() {
+  const [navSelected, setNavSelected] = useState('home');
+
+  useEffect(() => {
+    // Set the initial value of navSelected based on the current URL
+    const path = window.location.pathname;
+    if (path === '/') {
+      setNavSelected('home');
+    } else if (path === '/services') {
+      setNavSelected('services');
+    } else if (path === '/contact') {
+      setNavSelected('contact');
+    }
+  }, []); // Empty dependency array ensures the effect runs only once
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header navSelected={navSelected} setNavSelected={setNavSelected} />
+      <div className='main'>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='/services' element={<Services />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route element={<NotFound />} />
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 }

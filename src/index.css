@@ -1,13 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Neuton&display=swap");
 body {
+  background-color: #333;
+  color: #fff;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Neuton', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body header {
+  margin: 2px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: larger;
 }
+
+@media screen and (min-width: 769px) {
+  body header .menu-hamburger {
+    display: none;
+  }
+}
+
+body header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding-left: 2px;
+  width: 100%;
+}
+
+body header ul li {
+  list-style: none;
+  text-align: left;
+  padding: 6px;
+  display: block;
+}
+
+body header ul li a:active,
+body header ul li a:visited,
+body header ul li a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+body header ul li.selected, body header ul li:hover {
+  background-color: #333;
+}
+
+body header .desktop-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #000;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media only screen and (max-width: 768px) {
+  body header .desktop-menu {
+    display: none;
+  }
+}
+
+body header .mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #000;
+  z-index: 1000;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  body header .mobile-menu {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  body header .mobile-menu {
+    display: none;
+  }
+}
+
+body header .mobile-menu .close-icon {
+  position: fixed;
+  top: 2;
+  left: 100%;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+}
+
+body header .mobile-menu.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.main {
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .main {
+    margin-left: 220px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+/*# sourceMappingURL=index.css.map */
