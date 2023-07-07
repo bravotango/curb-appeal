@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Nav } from '../utils/interfaces/nav';
-
+import logo from '../assests/curb-appeal.png';
 const Navigation: React.FC<Nav> = ({ navSelected, setNavSelected }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,26 +10,30 @@ const Navigation: React.FC<Nav> = ({ navSelected, setNavSelected }) => {
 
   const navList = () => {
     return (
-      <ul>
-        <li
-          onClick={() => setNavSelected('home')}
-          className={navSelected === 'home' ? 'selected' : ''}
-        >
-          <a href='/'>Home</a>
-        </li>
-        <li
-          onClick={() => setNavSelected('services')}
-          className={navSelected === 'services' ? 'selected' : ''}
-        >
-          <a href='/services'>Services</a>
-        </li>
-        <li
-          onClick={() => setNavSelected('contact')}
-          className={navSelected === 'contact' ? 'selected' : ''}
-        >
-          <a href='/contact'>Contact</a>
-        </li>
-      </ul>
+      <React.Fragment>
+        <img className='logo' src={logo} />
+
+        <ul>
+          <li
+            onClick={() => setNavSelected('home')}
+            className={navSelected === 'home' ? 'selected' : ''}
+          >
+            <a href='/'>Home</a>
+          </li>
+          <li
+            onClick={() => setNavSelected('services')}
+            className={navSelected === 'services' ? 'selected' : ''}
+          >
+            <a href='/services'>Services</a>
+          </li>
+          <li
+            onClick={() => setNavSelected('contact')}
+            className={navSelected === 'contact' ? 'selected' : ''}
+          >
+            <a href='/contact'>Contact</a>
+          </li>
+        </ul>
+      </React.Fragment>
     );
   };
 

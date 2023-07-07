@@ -11,7 +11,6 @@ const Header: React.FC<Nav> = ({
       <div className='navigation'>
         <Navigation navSelected={navSelected} setNavSelected={setNavSelected} />
       </div>
-      <div className='companyName'>Curb Appeal Landscapes</div>
     </header>
   );
 };
