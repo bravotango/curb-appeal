@@ -9,7 +9,6 @@ const Header: React.FC<Nav> = ({
   return (
     <header className='header'>
       <div className='navigation'>
-        BT
         <Navigation navSelected={navSelected} setNavSelected={setNavSelected} />
       </div>
     </header>
