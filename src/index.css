@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Neuton&display=swap");
 body {
-  background-color: #333;
+  background-color: #e1a819;
   color: #fff;
   margin: 0;
   font-family: 'Neuton', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body h1 {
+  color: #000;
+}
+
+body .logo {
+  color: grey;
+  width: 100%;
 }
 
 body header {
@@ -44,7 +53,12 @@ body header ul li {
   list-style: none;
   text-align: left;
   padding: 6px;
+  margin: 0 3px;
   display: block;
+  border-top-left-radius: 10px;
+  /* Add border radius */
+  border-bottom-left-radius: 10px;
+  /* Add border radius */
 }
 
 body header ul li a:active,
@@ -55,15 +69,19 @@ body header ul li a {
   text-decoration: none;
 }
 
-body header ul li.selected, body header ul li:hover {
-  background-color: #333;
+body header ul li.selected {
+  background-color: #e1a819;
+}
+
+body header ul li:hover {
+  background-color: rgba(225, 168, 25, 0.5);
 }
 
 body header .desktop-menu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 280px;
   height: 100%;
   background-color: #000;
   z-index: 1000;
@@ -74,9 +92,9 @@ body header .desktop-menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -92,7 +110,7 @@ body header .mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 280px;
   height: 100%;
   background-color: #000;
   z-index: 1000;
@@ -136,7 +154,7 @@ body header .mobile-menu.open {
 
 @media screen and (min-width: 769px) {
   .main {
-    margin-left: 220px;
+    margin-left: 300px;
   }
 }
 

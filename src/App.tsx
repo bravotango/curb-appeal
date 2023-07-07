@@ -19,6 +19,8 @@ function App() {
       setNavSelected('services');
     } else if (path === '/contact') {
       setNavSelected('contact');
+    } else {
+      setNavSelected('notfound');
     }
   }, []); // Empty dependency array ensures the effect runs only once
 
@@ -31,7 +33,7 @@ function App() {
             <Route path='/' element={<Dashboard />} />
             <Route path='/services' element={<Services />} />
             <Route path='/contact' element={<Contact />} />
-            <Route element={<NotFound />} />
+            <Route path='*' element={<NotFound />} /> {/* Updated Route */}
           </Routes>
         </Router>
       </div>
