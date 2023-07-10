@@ -1,4 +1,4 @@
 export interface Nav {
-  navSelected: string;
-  setNavSelected: React.Dispatch<React.SetStateAction<string>>;
+  activeComponent: string;
+  setActiveComponent: React.Dispatch<React.SetStateAction<string>>;
 }

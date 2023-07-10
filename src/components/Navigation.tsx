@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Nav } from '../utils/interfaces/nav';
-import logo from '../assests/curb-appeal.png';
-const Navigation: React.FC<Nav> = ({ navSelected, setNavSelected }) => {
+import logo from '../assets/curb-appeal.png';
+import {
+  HomeIcon,
+  CodeOfConductIcon,
+  DeviceMobileIcon,
+} from '@primer/octicons-react';
+const Navigation: React.FC<Nav> = ({ activeComponent, setActiveComponent }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -15,22 +20,37 @@ const Navigation: React.FC<Nav> = ({ navSelected, setNavSelected }) => {
 
         <ul>
           <li
-            onClick={() => setNavSelected('home')}
-            className={navSelected === 'home' ? 'selected' : ''}
+            onClick={() => setActiveComponent('dashboard')}
+            className={activeComponent === 'dashboard' ? 'active' : ''}
           >
-            <a href='/'>Home</a>
+            <div className='iconAndName'>
+              <div>
+                <HomeIcon size={16} />
+              </div>
+              <div>Home</div>
+            </div>
           </li>
           <li
-            onClick={() => setNavSelected('services')}
-            className={navSelected === 'services' ? 'selected' : ''}
+            onClick={() => setActiveComponent('services')}
+            className={activeComponent === 'services' ? 'active' : ''}
           >
-            <a href='/services'>Services</a>
+            <div className='iconAndName'>
+              <div>
+                <CodeOfConductIcon size={16} />
+              </div>
+              <div>Services</div>
+            </div>
           </li>
           <li
-            onClick={() => setNavSelected('contact')}
-            className={navSelected === 'contact' ? 'selected' : ''}
+            onClick={() => setActiveComponent('contact')}
+            className={activeComponent === 'contact' ? 'active' : ''}
           >
-            <a href='/contact'>Contact</a>
+            <div className='iconAndName'>
+              <div>
+                <DeviceMobileIcon size={16} />
+              </div>
+              <div>Contact</div>
+            </div>
           </li>
         </ul>
       </React.Fragment>
