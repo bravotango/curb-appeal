@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import { Nav } from '../utils/interfaces/nav';
+import logo from '../assets/curb-appeal-small.png';
 
 const Header: React.FC<Nav> = ({
   activeComponent,
@@ -8,6 +9,9 @@ const Header: React.FC<Nav> = ({
 }): JSX.Element => {
   return (
     <header className='header'>
+      <div>
+        <img className='logo' src={logo} />
+      </div>
       <div className='navigation'>
         <Navigation
           activeComponent={activeComponent}

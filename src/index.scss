@@ -15,16 +15,19 @@ body {
   h1 {
     color: $background-primary;
   }
-  .logo {
-    color: grey;
-    width: 100%;
-  }
+
   header {
-    margin: 2px 6px;
+    .logo {
+      color: grey;
+      width: 15%;
+    }
+    margin: 0;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: larger;
-
+    background-color: #000;
     .menu-hamburger {
       @media screen and (min-width: 769px) {
         display: none;
@@ -77,6 +80,9 @@ body {
       }
     }
     .desktop-menu {
+      .logo {
+        width: 100%;
+      }
       position: fixed;
       top: 0;
       left: 0;
@@ -97,6 +103,9 @@ body {
     }
 
     .mobile-menu {
+      .logo {
+        width: 100%;
+      }
       position: fixed;
       top: 0;
       left: 0;
@@ -169,7 +178,7 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     font-size: 20px;
-    border-radius: 50%;
+
     cursor: pointer;
     z-index: 2;
     transition: background-color 0.3s;
@@ -180,7 +189,9 @@ main {
   }
 
   .scroll-left {
-    left: 0;
+    margin-left: 0px;
+  }
+  @media screen and (min-width: 769px) {
   }
 
   .scroll-right {
