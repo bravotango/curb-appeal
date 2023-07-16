@@ -33,6 +33,14 @@ const Dashboard: React.FC = () => {
   return (
     <div>
       <h1>Dashboard</h1>
+      <p>
+        Curb Appeal Landscapes specializes in turning ordinary outdoor spaces
+        into extraordinary landscapes that reflect your personal style and
+        enhance the architecture of your home. Our landscape design and
+        installation services are meticulously tailored to meet your unique
+        vision and preferences. With a focus on collaborative design, we work
+        closely with you to bring your dream landscape to life.
+      </p>
       <Scroller articles={articles} />
     </div>
   );
