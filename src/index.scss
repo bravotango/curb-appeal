@@ -1,19 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Neuton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton&family=Oswald:wght@500&family=Overpass&family=Roboto&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css');
 //variables
 $background-primary: #000;
 $background-secondary: rgb(225, 168, 25);
 //$background-secondary: rgb(3, 10, 137);
 body {
-  background-color: $background-secondary;
+  background-color: $background-primary;
   color: #fff;
   margin: 0;
-  font-family: 'Neuton', serif;
+  font-family: 'Overpass', monospace;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   h1 {
     color: $background-primary;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 16px;
   }
 
   header {
@@ -39,6 +45,7 @@ body {
       justify-content: center;
       padding-left: 2px;
       width: 100%;
+      font-family: 'Neuton', monospace;
       li {
         display: flex;
         justify-content: flex-start;
@@ -138,8 +145,40 @@ body {
     }
   }
 }
+.box {
+  margin: 12px 0;
+  padding: 12px;
+  background-color: #212121;
+  border-color: rgba(#fff, 0.25);
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+
+  .badge {
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: $background-secondary;
+    color: black;
+    height: 60px;
+    width: 60px;
+    border-radius: 0 6px 0 50%;
+    z-index: 50;
+    display: flex; /* Add display: flex */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+    small {
+      font-size: smaller;
+    }
+  }
+}
+
 main {
-  margin-left: 20px;
+  margin: 0 20px;
+  max-width: 800px;
 }
 @media screen and (min-width: 769px) {
   main {

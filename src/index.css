@@ -1,16 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Neuton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neuton&family=Oswald:wght@500&family=Overpass&family=Roboto&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css");
 body {
-  background-color: #e1a819;
+  background-color: #000;
   color: #fff;
   margin: 0;
-  font-family: 'Neuton', serif;
+  font-family: 'Overpass', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body h1 {
   color: #000;
+}
+
+body h2 {
+  font-size: 15px;
+}
+
+body p {
+  font-size: 16px;
 }
 
 body header {
@@ -53,6 +61,7 @@ body header ul {
           justify-content: center;
   padding-left: 2px;
   width: 100%;
+  font-family: 'Neuton', monospace;
 }
 
 body header ul li {
@@ -184,8 +193,53 @@ body header .mobile-menu.open {
           transform: translateX(0);
 }
 
+.box {
+  margin: 12px 0;
+  padding: 12px;
+  background-color: #212121;
+  border-color: rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+}
+
+.box .badge {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #e1a819;
+  color: black;
+  height: 60px;
+  width: 60px;
+  border-radius: 0 6px 0 50%;
+  z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Add display: flex */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Center horizontally */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Center vertically */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box .badge small {
+  font-size: smaller;
+}
+
 main {
-  margin-left: 20px;
+  margin: 0 20px;
+  max-width: 800px;
 }
 
 @media screen and (min-width: 769px) {
