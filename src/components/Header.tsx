@@ -10,7 +10,7 @@ const Header: React.FC<Nav> = ({
   return (
     <header className='header'>
       <div>
-        <img className='logo' src={logo} />
+        <img className='logo logo-small' src={logo} />
       </div>
       <div className='navigation'>
         <Navigation

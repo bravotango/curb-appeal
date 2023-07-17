@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Footer = () => {
-  return <React.Fragment>Footer</React.Fragment>;
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <React.Fragment>&copy;Curb Appeal Landscapes {currentYear}</React.Fragment>
+  );
 };
 
 export default Footer;
