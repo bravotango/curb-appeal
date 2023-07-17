@@ -12,7 +12,7 @@ $iconHeight: 33.6px; // 50% of original height (67.2px / 2)
 $totalIcons: 25;
 
 // Define the path to your icons PNG file
-$iconsPath: './assets/landscapesIcons.png';
+$iconsPath: './assets/landscapes.png';
 
 // SCSS mixin to generate the background position and size for each icon
 @mixin iconBackground($index) {
@@ -205,6 +205,10 @@ body {
   }
 }
 .box {
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+    padding-right: 20px;
+  }
   margin: 12px 0;
   padding: 12px;
   background-color: #212121;
