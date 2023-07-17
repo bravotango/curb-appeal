@@ -701,7 +701,8 @@ body header .mobile-menu.open {
     padding: 6px;
   }
   .box h2 {
-    max-width: 60%;
+    margin-top: 0;
+    max-width: 65%;
   }
 }
 
