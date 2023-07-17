@@ -12,7 +12,7 @@ $iconHeight: 33.6px; // 50% of original height (67.2px / 2)
 $totalIcons: 25;
 
 // Define the path to your icons PNG file
-$iconsPath: './assets/landscapes.png';
+$iconsPath: './assets/landscapesIcons.png';
 
 // SCSS mixin to generate the background position and size for each icon
 @mixin iconBackground($index) {
@@ -260,7 +260,7 @@ footer {
   background-repeat: no-repeat;
   background-position: bottom;
   background-color: $background-primary;
-  height: 90px;
+  height: 120px;
   width: 100%;
   display: flex;
   justify-content: center;
