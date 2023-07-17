@@ -14,6 +14,7 @@ const Services = () => {
       </p>
       <div className='box'>
         <div className='badge'>
+          <small>starting at</small>
           $59.99
           <small>+tax</small>
         </div>
@@ -21,35 +22,33 @@ const Services = () => {
         <p>
           Maintaining a well-manicured lawn is essential for creating an
           inviting outdoor environment. With a keen eye for detail, Curb Appeal
-          provides clean and precise edging services. Grass clippings and debris
-          are diligently cleared away, leaving your property looking pristine.
+          provides clean and precise edging and mowing services. Debris are
+          diligently cleared away, leaving your property looking pristine.
         </p>
       </div>
       <div className='box'>
         <h2>Power washing</h2>
         <div className='badge'>
+          <small>per hour</small>
           $89.99
           <small>+tax</small>
         </div>
         <p>
-          Over time, outdoor surfaces can accumulate dirt, grime, and stains,
-          diminishing their appearance. Curb Appeal's power washing service can
-          restore the beauty of your driveways, sidewalks, patios, and other
-          hard surfaces. Using professional-grade equipment, built-up dirt,
-          mold, mildew, and other unsightly substances are effectively removed.
-          Experience the difference as our power washing leaves your surfaces
-          clean and rejuvenated.
+          Restore the beauty of your outdoor surfaces with Curb Appeal's power
+          washing service. Our professional-grade equipment effectively removes
+          dirt, grime, stains, mold, and mildew, leaving your driveways,
+          sidewalks, patios, and other hard surfaces clean and rejuvenated.
         </p>
       </div>
       <div className='box'>
         <h2>Landscapes</h2>
         <p>
-          Enhance your outdoor space with a stunning landscape that reflects
-          your style and complements your home's architecture. Our personalized
-          landscape design and installation services bring your vision to life.
-          From vibrant flower beds to sturdy retaining walls, we create a
-          beautiful and functional outdoor environment tailored to your
-          preferences.
+          <div className='icon icon-2'></div>
+          Elevate your outdoor space with Curb Appeal's personalized landscape
+          design and installation. We bring your vision to life, creating a
+          stunning and functional environment that reflects your style. From
+          vibrant flower beds to beautiful stone work and retaining walls, we
+          tailor every detail to your preferences.
         </p>
       </div>
     </React.Fragment>

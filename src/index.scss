@@ -4,22 +4,81 @@
 $background-primary: #000;
 $background-secondary: rgb(225, 168, 25);
 //$background-secondary: rgb(3, 10, 137);
+// Define the width and height of each icon
+$iconWidth: 34px; // 50% of original width (68px / 2)
+$iconHeight: 33.6px; // 50% of original height (67.2px / 2)
+
+// Define the total number of icons
+$totalIcons: 25;
+
+// Define the path to your icons PNG file
+$iconsPath: './assets/landscapesIcons.png';
+
+// SCSS mixin to generate the background position and size for each icon
+@mixin iconBackground($index) {
+  $row: ceil($index / 5);
+  $col: ($index - 1) % 5;
+  $xPos: ($col * $iconWidth * 2) + ($col * 1px);
+  $yPos: ($row * $iconHeight * 2) + ($row * 1px);
+  background: url('#{$iconsPath}') $xPos $yPos no-repeat;
+  background-size: 100%;
+}
+
+// SCSS loop to generate classes for each icon
+@for $i from 1 through $totalIcons {
+  .icon-#{$i} {
+    width: $iconWidth;
+    height: $iconHeight;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: '';
+      @include iconBackground($i);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+html,
 body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body {
+  display: flex;
   background-color: $background-primary;
   color: #fff;
   margin: 0;
   font-family: 'Overpass', monospace;
-
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   h1 {
     color: $background-primary;
   }
   h2 {
-    font-size: 15px;
+    font-size: 28px;
+    font-family: 'Oswald', sans-serif;
   }
   p {
     font-size: 16px;
+    line-height: 1.65;
   }
 
   header {
@@ -154,16 +213,24 @@ body {
   border-style: solid;
   border-width: 1px;
   position: relative;
-
+  p {
+    margin-right: 24%;
+  }
   .badge {
     font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    padding: 20px;
+    @media only screen and (max-width: 768px) {
+      font-size: 28px;
+      padding: 6px;
+    }
     position: absolute;
     top: 0px;
     right: 0px;
     background-color: $background-secondary;
     color: black;
-    height: 60px;
-    width: 60px;
+    line-height: 1.2;
+    min-width: 100px;
     border-radius: 0 6px 0 50%;
     z-index: 50;
     display: flex; /* Add display: flex */
@@ -171,14 +238,34 @@ body {
     align-items: center; /* Center vertically */
     flex-direction: column;
     small {
-      font-size: smaller;
+      font-size: 16px;
     }
   }
 }
 
 main {
-  margin: 0 20px;
+  flex: 1;
   max-width: 800px;
+  margin: 0 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  background-image: url('./assets/footer.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: $background-primary;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  z-index: 500;
 }
 @media screen and (min-width: 769px) {
   main {
@@ -230,7 +317,7 @@ main {
   .scroll-left {
     margin-left: 0px;
   }
-  @media screen and (min-width: 769px) {
+  @media screen and (max-width: 769px) {
   }
 
   .scroll-right {
