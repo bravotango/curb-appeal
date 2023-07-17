@@ -18,7 +18,7 @@ const Services = () => {
           $59.99
           <small>+tax</small>
         </div>
-        <h2>Lawn mow, trim & blow</h2>
+        <h2>Lawn mow, trim, blow</h2>
         <p>
           Maintaining a well-manicured lawn is essential for creating an
           inviting outdoor environment. With a keen eye for detail, Curb Appeal
@@ -43,7 +43,7 @@ const Services = () => {
       <div className='box'>
         <h2>Landscapes</h2>
         <p>
-          <div className='icon icon-2'></div>
+          <span className='icon icon-2'></span>
           Elevate your outdoor space with Curb Appeal's personalized landscape
           design and installation. We bring your vision to life, creating a
           stunning and functional environment that reflects your style. From
