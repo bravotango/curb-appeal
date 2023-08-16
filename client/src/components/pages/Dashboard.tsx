@@ -1,6 +1,23 @@
 import Scroller from '../Scroller';
-
+import b4 from '../../assets/project-1/front-before.jpg';
+import PictureComponent from '../Picture';
 const Dashboard: React.FC = () => {
+  const projects = [
+    {
+      id: 1,
+      project: {
+        location: '914',
+        client: 'Tom & Jean',
+        progress: [
+          {
+            id: 1,
+            before: { picUrl: b4, caption: '' },
+            after: { picUrl: '', caption: '' },
+          },
+        ],
+      },
+    },
+  ];
   const articles = [
     {
       title: 'Article 1',
@@ -32,7 +49,7 @@ const Dashboard: React.FC = () => {
   ];
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h2 className='tagline'>Turning heads, one landscape at a time</h2>
       <p>
         Curb Appeal Landscapes specializes in turning ordinary outdoor spaces
         into extraordinary landscapes that reflect your personal style and
@@ -41,7 +58,52 @@ const Dashboard: React.FC = () => {
         vision and preferences. With a focus on collaborative design, we work
         closely with you to bring your dream landscape to life.
       </p>
-      <Scroller articles={articles} />
+      {/* <Scroller articles={articles} /> */}
+      {/* <PictureComponent alt='POOP' caption='FARTED' src={b4} /> */}
+      <div className='box'>
+        <div className='badge'>
+          <small>starting at</small>
+          $69.99
+          <small>+tax</small>
+        </div>
+        <h2>Lawn mow, trim, blow</h2>
+        <p>
+          Maintaining a well-manicured lawn is essential for creating an
+          inviting outdoor environment. With a keen eye for detail, Curb Appeal
+          provides clean and precise edging and mowing services. Debris are
+          diligently cleared away, leaving your property looking pristine.
+        </p>
+      </div>
+      <div className='box'>
+        <h2>Power washing</h2>
+        <div className='badge'>
+          <small>per hour</small>
+          $89.99
+          <small>+tax</small>
+        </div>
+        <p>
+          Restore the beauty of your outdoor surfaces with Curb Appeal's power
+          washing service. Our professional-grade equipment effectively removes
+          dirt, grime, stains, mold, and mildew, leaving your driveways,
+          sidewalks, patios, and other hard surfaces clean and rejuvenated.
+        </p>
+      </div>
+      <div className='box'>
+        <div className='badge'>
+          <small>per hour</small>
+          $79.99
+          <small>+tax</small>
+        </div>
+        <h2>Landscapes</h2>
+        <p>
+          <span className='icon icon-2'></span>
+          Elevate your outdoor space with Curb Appeal's personalized landscape
+          design and installation. We bring your vision to life, creating a
+          stunning and functional environment that reflects your style. From
+          vibrant flower beds to beautiful stone work and retaining walls, we
+          tailor every detail to your preferences.
+        </p>
+      </div>
     </div>
   );
 };

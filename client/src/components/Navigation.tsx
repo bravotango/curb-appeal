@@ -49,7 +49,7 @@ const Navigation: React.FC<Nav> = ({ activeComponent, setActiveComponent }) => {
               <div>Home</div>
             </div>
           </li>
-          <li
+          {/* <li
             onClick={() => {
               setActiveComponent('services');
               setIsOpen(false);
@@ -62,7 +62,7 @@ const Navigation: React.FC<Nav> = ({ activeComponent, setActiveComponent }) => {
               </div>
               <div>Services</div>
             </div>
-          </li>
+          </li> */}
           <li
             onClick={() => {
               setActiveComponent('contact');

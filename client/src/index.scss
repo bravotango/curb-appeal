@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Oswald:wght@500&family=Overpass&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css');
 //variables
-$background-primary: #000;
-$background-secondary: rgb(225, 168, 25);
-//$background-secondary: rgb(3, 10, 137);
+$color-primary: #000;
+$color-secondary: rgb(225, 168, 25);
+$color-soft: #7b7b7b;
+//$color-secondary: rgb(3, 10, 137);
 // Define the width and height of each icon
 $iconWidth: 34px; // 50% of original width (68px / 2)
 $iconHeight: 33.6px; // 50% of original height (67.2px / 2)
@@ -62,7 +63,7 @@ body {
 
 body {
   display: flex;
-  background-color: $background-primary;
+  background-color: $color-primary;
   color: #fff;
   margin: 0;
   font-family: 'Overpass', monospace;
@@ -70,7 +71,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   h1 {
-    color: $background-primary;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
   }
   h2 {
     font-size: 28px;
@@ -80,20 +82,38 @@ body {
     font-size: 16px;
     line-height: 1.65;
   }
+  .tagline {
+    font-family: 'Vollkorn', serif;
+    text-transform: uppercase;
+    color: $color-soft;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: 769px) {
+      font-size: x-large;
+    }
+  }
 
   header {
-    .logo {
-      color: grey;
-      width: 15%;
+    .mobile-logo {
+      width: 35%;
+      @media screen and (min-width: 769px) {
+        display: none;
+      }
+    }
+    div {
+      text-align: center;
+      min-width: 30px;
     }
     margin: 0;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
     font-size: larger;
     background-color: #000;
     .menu-hamburger {
+      margin-top: 6px;
       @media screen and (min-width: 769px) {
         display: none;
       }
@@ -140,11 +160,11 @@ body {
           text-decoration: none;
         }
         &.active {
-          background-color: $background-secondary;
+          background-color: $color-secondary;
         }
 
         &:hover {
-          background-color: rgba($background-secondary, 0.5);
+          background-color: rgba($color-secondary, 0.5);
         }
       }
     }
@@ -157,7 +177,7 @@ body {
       left: 0;
       width: 280px;
       height: 100%;
-      background-color: $background-primary;
+      background-color: $color-primary;
       z-index: 1000;
 
       display: flex;
@@ -174,15 +194,16 @@ body {
     .mobile-menu {
       .logo {
         width: 100%;
+        display: none;
       }
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 280px;
+      top: 25px;
+      right: 0;
+      width: 50%;
       height: 100%;
-      background-color: $background-primary;
+      background-color: rgba($color-primary, 0.85);
       z-index: 1000;
-      transform: translateX(-100%);
+      transform: translateX(200%);
       transition: transform 0.3s ease;
 
       @media only screen and (max-width: 768px) {
@@ -197,7 +218,7 @@ body {
         top: 2;
         left: 100%;
         z-index: 1001;
-        background-color: rgba($background-primary, 0.5);
+        background-color: rgba($color-primary, 0.5);
         border: 1px solid #fff;
       }
 
@@ -240,7 +261,7 @@ body {
     position: absolute;
     top: 0px;
     right: 0px;
-    background-color: $background-secondary;
+    background-color: $color-secondary;
     color: black;
     line-height: 1.2;
     min-width: 100px;
@@ -263,12 +284,13 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 footer {
   background-image: url('./assets/footer.png');
   background-repeat: no-repeat;
   background-position: bottom;
-  background-color: $background-primary;
+  background-color: $color-primary;
   height: 120px;
   width: 100%;
   display: flex;

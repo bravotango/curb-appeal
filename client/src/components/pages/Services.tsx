@@ -3,7 +3,7 @@ const Services = () => {
   return (
     <React.Fragment>
       <h1>Services</h1>
-      <p>
+      {/* <p>
         Curb Appeal Landscapes specializes in a variety of professional
         landscaping services that enhance the beauty and functionality of your
         outdoor spaces. With a commitment to delivering high-quality workmanship
@@ -11,11 +11,11 @@ const Services = () => {
         needs. Whether you require regular lawn maintenance or a complete
         landscape transformation, you can rely on Curb Appeal to provide the
         expertise you need. Our services include:
-      </p>
+      </p> */}
       <div className='box'>
         <div className='badge'>
           <small>starting at</small>
-          $59.99
+          $69.99
           <small>+tax</small>
         </div>
         <h2>Lawn mow, trim, blow</h2>
