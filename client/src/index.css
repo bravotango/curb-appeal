@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Oswald:wght@500&family=Overpass&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css");
 .icon-1 {
   width: 34px;
@@ -492,7 +492,8 @@ body {
 }
 
 body h1 {
-  color: #000;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff;
 }
 
 body h2 {
@@ -505,6 +506,25 @@ body p {
   line-height: 1.65;
 }
 
+body .tagline {
+  font-family: 'Vollkorn', serif;
+  text-transform: uppercase;
+  color: #7b7b7b;
+  font-size: large;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  body .tagline {
+    font-size: x-large;
+  }
+}
+
 body header {
   margin: 0;
   padding: 0 10px;
@@ -514,16 +534,27 @@ body header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: larger;
   background-color: #000;
 }
 
-body header .logo {
-  color: grey;
-  width: 15%;
+body header .mobile-logo {
+  width: 35%;
+}
+
+@media screen and (min-width: 769px) {
+  body header .mobile-logo {
+    display: none;
+  }
+}
+
+body header div {
+  text-align: center;
+  min-width: 30px;
+}
+
+body header .menu-hamburger {
+  margin-top: 6px;
 }
 
 @media screen and (min-width: 769px) {
@@ -637,14 +668,14 @@ body header .desktop-menu .logo {
 
 body header .mobile-menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 280px;
+  top: 25px;
+  right: 0;
+  width: 50%;
   height: 100%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 1000;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
@@ -653,6 +684,7 @@ body header .mobile-menu {
 
 body header .mobile-menu .logo {
   width: 100%;
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -766,6 +798,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 footer {
