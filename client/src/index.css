@@ -478,6 +478,10 @@ body {
   height: 100vh;
 }
 
+.App a {
+  color: pink;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,6 +493,10 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body a {
+  color: pink;
 }
 
 body h1 {
@@ -801,6 +809,10 @@ main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+main div main a {
+  color: pink;
 }
 
 footer {

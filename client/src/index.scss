@@ -59,6 +59,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  a {
+    color: pink;
+  }
 }
 
 body {
@@ -70,6 +73,9 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  a {
+    color: pink;
+  }
   h1 {
     font-family: 'Bebas Neue', sans-serif;
     color: #fff;
@@ -285,6 +291,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  div main a {
+    color: pink;
+  }
 }
 footer {
   background-image: url('./assets/footer.png');
