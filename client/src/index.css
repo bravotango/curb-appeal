@@ -479,7 +479,7 @@ body {
 }
 
 .App a {
-  color: pink;
+  color: #ffea00;
 }
 
 body {
@@ -812,7 +812,7 @@ main {
 }
 
 main div main a {
-  color: pink;
+  color: green;
 }
 
 footer {
