@@ -4,7 +4,8 @@
 $color-primary: #000;
 $color-secondary: rgb(225, 168, 25);
 $color-soft: #7b7b7b;
-$link: rgb(255, 234, 0);
+//$link: rgb(255, 234, 0);
+$link: rgb(225, 168, 25);
 //$color-secondary: rgb(3, 10, 137);
 // Define the width and height of each icon
 $iconWidth: 34px; // 50% of original width (68px / 2)
@@ -96,6 +97,8 @@ body {
     font-size: large;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     @media screen and (min-width: 769px) {
       font-size: x-large;
     }
@@ -284,6 +287,36 @@ body {
   }
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .image-container {
+    flex: 1;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      @media screen and (min-width: 768px) {
+        max-height: 300px;
+      }
+    }
+  }
+
+  .text-content {
+    flex: 1;
+    p {
+      margin: 0;
+    }
+  }
+}
+
 main {
   flex: 1;
   max-width: 800px;
@@ -298,17 +331,17 @@ main {
 }
 footer {
   background-image: url('./assets/footer.png');
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   background-color: $color-primary;
   height: 120px;
-  width: 80%;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
   font-size: 12px;
   margin-top: auto;
-  position: sticky;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 769px) {

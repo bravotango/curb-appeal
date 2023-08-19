@@ -47,20 +47,38 @@ const Dashboard: React.FC = () => {
 
     // Add more articles as needed
   ];
+
+  // Random article
+  const random = Math.floor(Math.random() * articles.length);
+  const focusedArticle = articles[random];
+
   return (
     <div>
-      <h2 className='tagline'>Turning heads, one landscape at a time</h2>
-      <p>
-        Curb Appeal Landscapes specializes in turning ordinary outdoor spaces
-        into extraordinary landscapes that reflect your personal style and
-        enhance the architecture of your space. Our landscape design and
-        installation services are meticulously tailored to meet your unique
-        vision and preferences. With a focus on collaborative design, Curb
-        Appeal Landscapes works closely with you to bring your dream landscape
-        to life.
-      </p>
-      {/* <Scroller articles={articles} /> */}
-      {/* <PictureComponent alt='POOP' caption='FARTED' src={b4} /> */}
+      <h2 className='tagline'>
+        Turning heads,
+        <br /> one landscape at a time
+      </h2>
+      <div className='flex'>
+        <div className='image-container'>
+          {
+            <PictureComponent
+              alt={focusedArticle.title}
+              src={focusedArticle.imageUrl}
+            />
+          }
+        </div>
+        <div className='text-content'>
+          <p>
+            Curb Appeal Landscapes specializes in turning ordinary outdoor
+            spaces into extraordinary landscapes that reflect your personal
+            style and enhance the architecture of your space. Our landscape
+            design and installation services are meticulously tailored to meet
+            your unique vision and preferences. With a focus on collaborative
+            design, Curb Appeal Landscapes works closely with you to bring your
+            dream landscape to life.
+          </p>
+        </div>
+      </div>
       <div className='box'>
         <div className='badge'>
           <small>starting at</small>
@@ -110,3 +128,6 @@ const Dashboard: React.FC = () => {
 };
 
 export default Dashboard;
+{
+  /* <Scroller articles={articles} /> */
+}

@@ -3,14 +3,12 @@ import React from 'react';
 interface PictureProps {
   src: string;
   alt: string;
-  caption: string;
 }
 
-const PictureComponent: React.FC<PictureProps> = ({ src, alt, caption }) => {
+const PictureComponent: React.FC<PictureProps> = ({ src, alt }) => {
   return (
     <div>
       <img src={src} alt={alt} />
-      <p>{caption}</p>
     </div>
   );
 };
