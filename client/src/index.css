@@ -804,6 +804,9 @@ body header .mobile-menu.open {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -812,7 +815,9 @@ body header .mobile-menu.open {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -826,6 +831,7 @@ body header .mobile-menu.open {
 .flex .image-container img {
   max-width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
 @media screen and (min-width: 768px) {
