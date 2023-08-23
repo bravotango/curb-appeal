@@ -49,6 +49,20 @@ const Navigation: React.FC<Nav> = ({ activeComponent, setActiveComponent }) => {
               <div>Home</div>
             </div>
           </li>
+          <li
+            onClick={() => {
+              setActiveComponent('projects');
+              setIsOpen(false);
+            }}
+            className={activeComponent === 'projects' ? 'active' : ''}
+          >
+            <div className='iconAndName'>
+              <div>
+                <CodeOfConductIcon size={16} />
+              </div>
+              <div>Projects</div>
+            </div>
+          </li>
           {/* <li
             onClick={() => {
               setActiveComponent('services');
