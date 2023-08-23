@@ -1,4 +1,3 @@
-import Scroller from '../Scroller';
 import b4 from '../../assets/project-1/front-before.jpg';
 import PictureComponent from '../Picture';
 const Dashboard: React.FC = () => {
