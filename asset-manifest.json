@@ -1,18 +1,28 @@
 {
   "files": {
-    "main.css": "/curb-appeal/static/css/main.38c2ebd5.css",
-    "main.js": "/curb-appeal/static/js/main.0a82464d.js",
+    "main.css": "/curb-appeal/static/css/main.5c695535.css",
+    "main.js": "/curb-appeal/static/js/main.702a4065.js",
     "static/js/787.dbdaf0c6.chunk.js": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js",
-    "static/media/front-before.jpg": "/curb-appeal/static/media/front-before.e530ca492f7e6e7367a5.jpg",
+    "static/media/front-before.jpg": "/curb-appeal/static/media/front-before.70bd222a887cefe9e066.jpg",
+    "static/media/back-looking-at-house-before.jpg": "/curb-appeal/static/media/back-looking-at-house-before.7e32838723e0f0e24512.jpg",
+    "static/media/gravel-before.jpg": "/curb-appeal/static/media/gravel-before.8a549e651e0ccf644cf4.jpg",
+    "static/media/front-after.jpg": "/curb-appeal/static/media/front-after.3ae92e17a05f037ec4cf.jpg",
+    "static/media/backyard-before.jpg": "/curb-appeal/static/media/backyard-before.d61e2a8a57393500bbc2.jpg",
+    "static/media/gravel-after.jpg": "/curb-appeal/static/media/gravel-after.bb9cb81e80a352fb4079.jpg",
+    "static/media/back-looking-at-house-after.jpg": "/curb-appeal/static/media/back-looking-at-house-after.17dde0bf0a4174de17e4.jpg",
+    "static/media/back-planters-before.jpg": "/curb-appeal/static/media/back-planters-before.4cf512f079d7ff462232.jpg",
+    "static/media/front-mid.jpg": "/curb-appeal/static/media/front-mid.ceffdfacfc52ca5129cd.jpg",
+    "static/media/backyard-after.jpg": "/curb-appeal/static/media/backyard-after.2dea62056612565952bb.jpg",
+    "static/media/back-planters-after.jpg": "/curb-appeal/static/media/back-planters-after.dd978c09cac9ba7be1b9.jpg",
     "static/media/curb-appeal.png": "/curb-appeal/static/media/curb-appeal.0688ee370fbba53cfef2.png",
     "static/media/landscapesIcons.png": "/curb-appeal/static/media/landscapesIcons.e63cf218490f2085b36e.png",
     "index.html": "/curb-appeal/index.html",
-    "main.38c2ebd5.css.map": "/curb-appeal/static/css/main.38c2ebd5.css.map",
-    "main.0a82464d.js.map": "/curb-appeal/static/js/main.0a82464d.js.map",
+    "main.5c695535.css.map": "/curb-appeal/static/css/main.5c695535.css.map",
+    "main.702a4065.js.map": "/curb-appeal/static/js/main.702a4065.js.map",
     "787.dbdaf0c6.chunk.js.map": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.38c2ebd5.css",
-    "static/js/main.0a82464d.js"
+    "static/css/main.5c695535.css",
+    "static/js/main.702a4065.js"
   ]
 }
