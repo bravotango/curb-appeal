@@ -80,7 +80,7 @@ const Dashboard: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className='box'>
+      {/* <div className='box'>
         <div className='badge'>
           <small>starting at</small>
           $69.99
@@ -107,7 +107,7 @@ const Dashboard: React.FC = () => {
           dirt, grime, stains, mold, and mildew, leaving your driveways,
           sidewalks, patios, and other hard surfaces clean and rejuvenated.
         </p>
-      </div>
+      </div> */}
       <div className='box'>
         <div className='badge'>
           <small>per hour</small>
