@@ -60,7 +60,7 @@ const Dashboard: React.FC = () => {
         <br /> one landscape at a time
       </h2>
       <div className='flex'>
-        <div className='image-container'>
+        <div>
           {
             <PictureComponent
               alt={focusedArticle.title}
