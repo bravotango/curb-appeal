@@ -815,10 +815,10 @@ body header .mobile-menu.open {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 
-@media screen and (min-width: 1028px) {
+@media screen and (min-width: 768px) {
   .flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -830,24 +830,6 @@ body header .mobile-menu.open {
   }
 }
 
-.flex .image-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.flex .image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-@media screen and (min-width: 768px) {
-  .flex .image-container img {
-    max-height: 300px;
-  }
-}
-
 .flex .text-content {
   -webkit-box-flex: 1.5;
       -ms-flex: 1.5;
@@ -856,6 +838,38 @@ body header .mobile-menu.open {
 
 .flex .text-content p {
   margin: 0;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 2px;
+  width: 800px;
+  height: 600px;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 98;
+  max-width: 98%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.image-container .title1 {
+  color: #a1d0ff;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 150%;
+}
+
+.image-container .shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.hidden img:last-child {
+  opacity: 0;
 }
 
 main {
@@ -879,36 +893,6 @@ main {
 
 main div main a {
   color: green;
-}
-
-main .projects h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-main .projects h2 {
-  margin-top: 20px;
-}
-
-main .projects .image-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-main .projects .image-container img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  /* Animation duration and easing */
-}
-
-main .projects p {
-  text-align: center;
-  margin-top: 10px;
 }
 
 footer {
@@ -1010,5 +994,57 @@ footer {
 /* Rest of the SCSS styles remain the same */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.toggle-switch {
+  display: inline-block;
+}
+
+.toggle-switch .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.toggle-switch .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch .switch input:checked + .slider {
+  background-color: #e1a819;
+}
+
+.toggle-switch .switch input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.toggle-switch .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 15px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.toggle-switch .switch .slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 /*# sourceMappingURL=index.css.map */

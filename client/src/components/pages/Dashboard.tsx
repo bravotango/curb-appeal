@@ -47,6 +47,8 @@ const Dashboard: React.FC = () => {
     // Add more articles as needed
   ];
 
+  /* <Scroller articles={articles} /> */
+
   // Random article
   const random = Math.floor(Math.random() * articles.length);
   const focusedArticle = articles[random];
@@ -128,5 +130,4 @@ const Dashboard: React.FC = () => {
 
 export default Dashboard;
 {
-  /* <Scroller articles={articles} /> */
 }
