@@ -13,53 +13,63 @@ import tala5 from '../../assets/Tala-sized/back-planters-before.jpg';
 import tala6 from '../../assets/Tala-sized/back-planters-after.jpg';
 
 interface BeforeAfterProps {
+  caption: string;
   before: PictureProps;
   after: PictureProps;
 }
 interface PictureProps {
   src: string;
-  caption: string;
 }
 interface ProjectProps {
   title: string;
   hours: number;
   photos: BeforeAfterProps[];
 }
-const Projects: FC = () => {
-  const [showBefore, setShowBefore] = useState(true);
 
+enum BeforeAfter {
+  Before = 'before',
+  After = 'after',
+}
+
+const Projects: FC = () => {
+  const [toggleStatus, setToggleStatus] = useState(BeforeAfter.Before);
+  const handleToggle = () => {
+    setToggleStatus(
+      toggleStatus === BeforeAfter.After
+        ? BeforeAfter.Before
+        : BeforeAfter.After
+    );
+  };
   const projects: ProjectProps[] = [
     {
       title: 'Deep weeding',
       hours: 50,
       photos: [
         {
+          caption: 'Carved out wanted vegetation & redefined rock borders',
+
           before: {
             src: TJ1,
-            caption: 'Asked to removed weeds uncover rock borders.',
           },
           after: {
             src: TJ2,
-            caption: 'Carved out wanted vegetation & redefined rock borders',
           },
         },
         {
+          caption:
+            'Cleared all weeds down fence line and start defining back lawn borders',
           before: {
             src: TJ3,
-            caption:
-              'Overwhelmed by weeds, asked to remove all vegetation except ferns',
           },
           after: {
             src: TJ4,
-            caption:
-              'Cleared all weeds down fence line and start defining back lawn borders',
           },
         },
         {
-          before: { src: TJ5, caption: 'Removed all weeds.' },
+          caption: 'Dug backyard down to dirt, prepping for landscaping',
+          before: { src: TJ5 },
           after: {
             src: TJ6,
-            caption: 'Stripped backyard down to dirt, prepping for landscaping',
           },
         },
       ],
@@ -69,36 +79,33 @@ const Projects: FC = () => {
       hours: 30,
       photos: [
         {
+          caption:
+            'Removed weeds from gravel, cleared raised beds, defined plants & new gravel',
+
           before: {
             src: tala1,
-            caption:
-              'Asked to remove weeds from gravel, raised beds, & trim plants',
           },
           after: {
             src: tala2,
-            caption:
-              'Removed weeds from gravel, cleared raised beds, defined plants & new gravel',
           },
         },
         {
+          caption:
+            'Removed weeds and trimmed plants, chainsaw unwanted pear tree.',
           before: {
             src: tala3,
-            caption: 'Remove weeds and unwanted vegetation',
           },
           after: {
             src: tala4,
-            caption:
-              'Removed weeds and trimmed plants, chainsaw unwanted pear tree.',
           },
         },
         {
+          caption: 'Removed all weeds and vegetation around raised beds',
           before: {
             src: tala5,
-            caption: 'Asked to clean up area around raised beds',
           },
           after: {
             src: tala6,
-            caption: 'Removed all weeds and vegetation around raised beds',
           },
         },
       ],
@@ -107,29 +114,51 @@ const Projects: FC = () => {
 
   return (
     <div className='projects'>
-      <h1>Projects</h1>
+      <h1>Before & After</h1>
       {projects.map((project, i) => (
         <div key={i}>
-          <h2>
+          {/* <h2>
             {project.title} - {project.hours} hours
-          </h2>
+          </h2> */}
+          <div className='toggle-switch'>
+            <label className='switch'>
+              <input
+                type='checkbox'
+                onChange={handleToggle}
+                checked={toggleStatus === BeforeAfter.After}
+              />
+              <span className='slider' />
+            </label>
+          </div>
+
           {project.photos.map((photo, i) => (
             <div key={i}>
               <div
-                className={`image-container ${showBefore ? 'before' : 'after'}`}
-                onClick={() => setShowBefore(!showBefore)}
+                className={`image-container ${
+                  toggleStatus === BeforeAfter.Before ? 'before' : 'after'
+                }`}
+                onClick={handleToggle}
               >
+                <div className='card-image'>
+                  <img
+                    src={photo.before.src}
+                    alt={photo.caption}
+                    style={{
+                      opacity: toggleStatus === BeforeAfter.Before ? 1 : 0,
+                    }}
+                  />
+                  <span className='card-title'>
+                    <h2 className='title1 shadow'>ANA</h2>
+                  </span>
+                </div>
                 <img
-                  src={showBefore ? photo.before.src : photo.after.src}
-                  alt={showBefore ? photo.before.caption : photo.after.caption}
+                  src={photo.after.src}
+                  alt={photo.caption}
+                  style={{
+                    opacity: toggleStatus === BeforeAfter.After ? 1 : 0,
+                  }}
                 />
               </div>
-
-              <p>
-                {showBefore
-                  ? 'Before: ' + photo.before.caption
-                  : photo.after.caption}
-              </p>
             </div>
           ))}
         </div>

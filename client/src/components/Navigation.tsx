@@ -60,7 +60,7 @@ const Navigation: React.FC<Nav> = ({ activeComponent, setActiveComponent }) => {
               <div>
                 <CodeOfConductIcon size={16} />
               </div>
-              <div>Projects</div>
+              <div>Before & After</div>
             </div>
           </li>
           {/* <li
