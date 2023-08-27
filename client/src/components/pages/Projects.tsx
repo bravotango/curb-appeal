@@ -115,21 +115,21 @@ const Projects: FC = () => {
   return (
     <div className='projects'>
       <h1>Before & After</h1>
+      <div className='toggle-switch'>
+        <label className='switch'>
+          <input
+            type='checkbox'
+            onChange={handleToggle}
+            checked={toggleStatus === BeforeAfter.After}
+          />{' '}
+          <span className='slider' />
+        </label>{' '}
+      </div>
       {projects.map((project, i) => (
         <div key={i}>
           {/* <h2>
             {project.title} - {project.hours} hours
           </h2> */}
-          <div className='toggle-switch'>
-            <label className='switch'>
-              <input
-                type='checkbox'
-                onChange={handleToggle}
-                checked={toggleStatus === BeforeAfter.After}
-              />
-              <span className='slider' />
-            </label>
-          </div>
 
           {project.photos.map((photo, i) => (
             <div key={i}>

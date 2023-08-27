@@ -843,8 +843,15 @@ body header .mobile-menu.open {
 .image-container {
   position: relative;
   border-radius: 2px;
-  width: 800px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .image-container {
+    width: 800px;
+    height: 600px;
+  }
 }
 
 .image-container img {

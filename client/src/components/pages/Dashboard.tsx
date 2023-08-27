@@ -110,7 +110,7 @@ const Dashboard: React.FC = () => {
       </div> */}
       <div className='box'>
         <div className='badge'>
-          <small>per hour</small>
+          <small>most projects</small>
           $79.99
           <small>+tax</small>
         </div>
