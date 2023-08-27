@@ -314,8 +314,10 @@ body {
 .image-container {
   position: relative;
   border-radius: 2px;
-  width: 800px;
-  height: 600px;
+
+  @media screen and (min-width: 768px) {
+  }
+
   img {
     position: absolute;
     top: 0;
@@ -325,16 +327,19 @@ body {
     height: auto;
     border-radius: 6px;
   }
+
   .title1 {
     color: #a1d0ff;
     font-family: 'Fredericka the Great', cursive;
-    font-size: 150%;
+    font-size: 1.5rem;
   }
+
   .shadow {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
   }
 }
+
 .hidden img:last-child {
   opacity: 0;
 }
