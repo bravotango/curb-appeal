@@ -572,6 +572,7 @@ body header div {
 
 body header .menu-hamburger {
   margin-top: 6px;
+  font-size: larger;
 }
 
 @media screen and (min-width: 769px) {
@@ -842,9 +843,12 @@ body header .mobile-menu.open {
 
 .image-container {
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 2px;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 300px;
 }
 
 @media screen and (min-width: 768px) {
@@ -867,7 +871,7 @@ body header .mobile-menu.open {
 .image-container .title1 {
   color: #a1d0ff;
   font-family: 'Fredericka the Great', cursive;
-  font-size: 150%;
+  font-size: 1.5rem;
 }
 
 .image-container .shadow {
@@ -908,7 +912,7 @@ footer {
   background-repeat: no-repeat;
   background-position: bottom;
   background-color: #000;
-  height: 120px;
+  height: 220px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -916,12 +920,20 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 12px;
   margin-top: auto;
   margin-bottom: 20px;
+}
+
+footer a {
+  font-size: x-large;
 }
 
 @media screen and (min-width: 769px) {
@@ -1005,6 +1017,7 @@ code {
 
 .toggle-switch {
   display: inline-block;
+  margin: 18px 0 0;
 }
 
 .toggle-switch .switch {

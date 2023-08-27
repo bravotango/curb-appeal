@@ -129,6 +129,7 @@ body {
     background-color: #000;
     .menu-hamburger {
       margin-top: 6px;
+      font-size: larger;
       @media screen and (min-width: 769px) {
         display: none;
       }
@@ -313,9 +314,13 @@ body {
 
 .image-container {
   position: relative;
+  align-items: center;
   border-radius: 2px;
-
+  width: 420px;
+  height: 300px;
   @media screen and (min-width: 768px) {
+    width: 800px;
+    height: 600px;
   }
 
   img {
@@ -361,14 +366,18 @@ footer {
   background-repeat: no-repeat;
   background-position: bottom;
   background-color: $color-primary;
-  height: 120px;
+  height: 220px;
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   font-size: 12px;
   margin-top: auto;
   margin-bottom: 20px;
+  a {
+    font-size: x-large;
+  }
 }
 @media screen and (min-width: 769px) {
   main {
@@ -436,6 +445,7 @@ code {
 }
 .toggle-switch {
   display: inline-block;
+  margin: 18px 0 0;
   .switch {
     position: relative;
     display: inline-block;

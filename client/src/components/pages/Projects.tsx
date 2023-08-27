@@ -123,7 +123,7 @@ const Projects: FC = () => {
             checked={toggleStatus === BeforeAfter.After}
           />{' '}
           <span className='slider' />
-        </label>{' '}
+        </label>
       </div>
       {projects.map((project, i) => (
         <div key={i}>
