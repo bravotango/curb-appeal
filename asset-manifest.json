@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/curb-appeal/static/css/main.02c72f2f.css",
-    "main.js": "/curb-appeal/static/js/main.dd95e982.js",
+    "main.css": "/curb-appeal/static/css/main.5414e268.css",
+    "main.js": "/curb-appeal/static/js/main.a578cb78.js",
     "static/js/787.dbdaf0c6.chunk.js": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js",
     "static/media/front-before.jpg": "/curb-appeal/static/media/front-before.70bd222a887cefe9e066.jpg",
     "static/media/back-looking-at-house-before.jpg": "/curb-appeal/static/media/back-looking-at-house-before.7e32838723e0f0e24512.jpg",
@@ -17,12 +17,12 @@
     "static/media/curb-appeal.png": "/curb-appeal/static/media/curb-appeal.0688ee370fbba53cfef2.png",
     "static/media/landscapesIcons.png": "/curb-appeal/static/media/landscapesIcons.e63cf218490f2085b36e.png",
     "index.html": "/curb-appeal/index.html",
-    "main.02c72f2f.css.map": "/curb-appeal/static/css/main.02c72f2f.css.map",
-    "main.dd95e982.js.map": "/curb-appeal/static/js/main.dd95e982.js.map",
+    "main.5414e268.css.map": "/curb-appeal/static/css/main.5414e268.css.map",
+    "main.a578cb78.js.map": "/curb-appeal/static/js/main.a578cb78.js.map",
     "787.dbdaf0c6.chunk.js.map": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02c72f2f.css",
-    "static/js/main.dd95e982.js"
+    "static/css/main.5414e268.css",
+    "static/js/main.a578cb78.js"
   ]
 }
