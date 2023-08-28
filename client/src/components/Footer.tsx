@@ -5,11 +5,12 @@ const Footer = () => {
 
   return (
     <React.Fragment>
+      <p>&copy; Curb Appeal Landscapes {currentYear}</p>
       <p>
-        &copy; Curb Appeal Landscapes {currentYear} <strong>Call:</strong>
-      </p>
-      <p>
-        <a href='tel:+4257732818'>(425) 773-2818</a>
+        <strong>Call:</strong>{' '}
+        <a href='tel:+4257732818' className='plain'>
+          (425) 773-2818
+        </a>
       </p>
     </React.Fragment>
   );
