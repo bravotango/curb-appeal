@@ -115,62 +115,79 @@ const Projects: FC = () => {
   return (
     <div className='projects'>
       <h1>Before & After</h1>
-      <div className='toggle-switch'>
-        <label className='switch'>
-          <input
-            type='checkbox'
-            onChange={handleToggle}
-            checked={toggleStatus === BeforeAfter.After}
-          />{' '}
-          <span className='slider' />
-        </label>
+      <div className='fixed'>
+        <h2
+          className={
+            toggleStatus === BeforeAfter.Before ? 'highlight' : 'disabled'
+          }
+        >
+          Before
+        </h2>
+        <div className='toggle-switch'>
+          <label className='switch'>
+            <input
+              type='checkbox'
+              onChange={handleToggle}
+              checked={toggleStatus === BeforeAfter.After}
+            />{' '}
+            <span className='slider' />
+          </label>
+        </div>
+        <h2
+          className={
+            toggleStatus === BeforeAfter.After ? 'highlight' : 'disabled'
+          }
+        >
+          After
+        </h2>
       </div>
-
-      {projects.map((project, i) => (
-        <div key={i}>
-          {project.photos.map((photo, i) => (
-            <div key={i} className='project-container'>
-              <div
-                className={`image-container ${
-                  toggleStatus === BeforeAfter.Before ? 'before' : 'after'
-                }`}
-                onClick={handleToggle}
-              >
+      <div className='project-list'>
+        {projects.map((project, i) => (
+          <div key={i}>
+            {project.photos.map((photo, i) => (
+              <div key={i} className='project-container'>
                 <div
-                  className={`card-image ${
-                    toggleStatus === BeforeAfter.Before ? 'active' : ''
+                  className={`image-container ${
+                    toggleStatus === BeforeAfter.Before ? 'before' : 'after'
                   }`}
+                  onClick={handleToggle}
                 >
-                  <img
-                    alt={photo.caption}
-                    src={photo.before.src}
-                    style={{
-                      opacity: toggleStatus === BeforeAfter.Before ? 1 : 0,
-                    }}
-                  />
-                  {/* <span className='card-title'>
+                  <div
+                    className={`card-image ${
+                      toggleStatus === BeforeAfter.Before ? 'active' : ''
+                    }`}
+                  >
+                    <img
+                      alt={photo.caption}
+                      src={photo.before.src}
+                      style={{
+                        opacity: toggleStatus === BeforeAfter.Before ? 1 : 0,
+                      }}
+                    />
+                    {/* <span className='card-title'>
                     <h2 className='title1 shadow'>ANA</h2>
                   </span> */}
-                </div>
+                  </div>
 
-                <div
-                  className={`card-image ${
-                    toggleStatus === BeforeAfter.After ? 'active' : ''
-                  }`}
-                >
-                  <img
-                    alt={photo.caption}
-                    src={photo.after.src}
-                    style={{
-                      opacity: toggleStatus === BeforeAfter.After ? 1 : 0,
-                    }}
-                  />
+                  <div
+                    className={`card-image ${
+                      toggleStatus === BeforeAfter.After ? 'active' : ''
+                    }`}
+                  >
+                    <img
+                      alt={photo.caption}
+                      src={photo.after.src}
+                      style={{
+                        opacity: toggleStatus === BeforeAfter.After ? 1 : 0,
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      ))}
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
