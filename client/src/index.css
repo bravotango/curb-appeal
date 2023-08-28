@@ -572,7 +572,7 @@ body header div {
 
 body header .menu-hamburger {
   margin-top: 6px;
-  font-size: larger;
+  font-size: 2em;
 }
 
 @media screen and (min-width: 769px) {
@@ -686,9 +686,8 @@ body header .desktop-menu .logo {
 
 body header .mobile-menu {
   position: fixed;
-  top: 25px;
   right: 0;
-  width: 50%;
+  width: 60%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 1000;
@@ -819,7 +818,7 @@ body header .mobile-menu.open {
   gap: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1028px) {
   .flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -841,42 +840,33 @@ body header .mobile-menu.open {
   margin: 0;
 }
 
-.image-container {
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 2px;
-  width: 420px;
-  height: 300px;
-}
-
-@media screen and (min-width: 768px) {
-  .image-container {
-    width: 800px;
-    height: 600px;
-  }
-}
-
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.projects {
   width: 100%;
-  max-width: 100%;
+}
+
+.projects .project-container {
+  width: 100%;
+}
+
+.projects .project-container .image-container {
+  width: 100%;
+  margin-bottom: 10px;
+  /* Add spacing between images */
+}
+
+.projects .project-container .image-container .card-image {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.projects .project-container .image-container .card-image.active {
+  display: block;
+}
+
+.projects .project-container .image-container .card-image img {
+  width: 100%;
   height: auto;
-  border-radius: 6px;
-}
-
-.image-container .title1 {
-  color: #a1d0ff;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 1.5rem;
-}
-
-.image-container .shadow {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
 }
 
 .hidden img:last-child {
@@ -934,6 +924,10 @@ footer {
 
 footer a {
   font-size: x-large;
+}
+
+footer a.plain {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 769px) {
@@ -1017,7 +1011,7 @@ code {
 
 .toggle-switch {
   display: inline-block;
-  margin: 18px 0 0;
+  margin: 0 0 50px 0;
 }
 
 .toggle-switch .switch {

@@ -125,39 +125,47 @@ const Projects: FC = () => {
           <span className='slider' />
         </label>
       </div>
+
       {projects.map((project, i) => (
         <div key={i}>
-          {/* <h2>
-            {project.title} - {project.hours} hours
-          </h2> */}
-
           {project.photos.map((photo, i) => (
-            <div key={i}>
+            <div key={i} className='project-container'>
               <div
                 className={`image-container ${
                   toggleStatus === BeforeAfter.Before ? 'before' : 'after'
                 }`}
                 onClick={handleToggle}
               >
-                <div className='card-image'>
+                <div
+                  className={`card-image ${
+                    toggleStatus === BeforeAfter.Before ? 'active' : ''
+                  }`}
+                >
                   <img
-                    src={photo.before.src}
                     alt={photo.caption}
+                    src={photo.before.src}
                     style={{
                       opacity: toggleStatus === BeforeAfter.Before ? 1 : 0,
                     }}
                   />
-                  <span className='card-title'>
+                  {/* <span className='card-title'>
                     <h2 className='title1 shadow'>ANA</h2>
-                  </span>
+                  </span> */}
                 </div>
-                <img
-                  src={photo.after.src}
-                  alt={photo.caption}
-                  style={{
-                    opacity: toggleStatus === BeforeAfter.After ? 1 : 0,
-                  }}
-                />
+
+                <div
+                  className={`card-image ${
+                    toggleStatus === BeforeAfter.After ? 'active' : ''
+                  }`}
+                >
+                  <img
+                    alt={photo.caption}
+                    src={photo.after.src}
+                    style={{
+                      opacity: toggleStatus === BeforeAfter.After ? 1 : 0,
+                    }}
+                  />
+                </div>
               </div>
             </div>
           ))}
