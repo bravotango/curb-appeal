@@ -120,6 +120,7 @@ const Projects: FC = () => {
           className={
             toggleStatus === BeforeAfter.Before ? 'highlight' : 'disabled'
           }
+          onClick={handleToggle}
         >
           Before
         </h2>
@@ -137,6 +138,7 @@ const Projects: FC = () => {
           className={
             toggleStatus === BeforeAfter.After ? 'highlight' : 'disabled'
           }
+          onClick={handleToggle}
         >
           After
         </h2>

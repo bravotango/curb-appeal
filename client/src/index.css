@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@400&family=Overpass&family=Roboto&family=Vollkorn&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css");
 .icon-1 {
   width: 34px;
@@ -840,6 +840,14 @@ body header .mobile-menu.open {
   margin: 0;
 }
 
+strong {
+  color: #e1a819;
+}
+
+.quote {
+  font-size: x-large;
+}
+
 .projects {
   width: 100%;
 }
@@ -1007,6 +1015,10 @@ footer a {
 
 footer a.plain {
   text-decoration: none;
+}
+
+footer p {
+  margin: 0;
 }
 
 @media screen and (min-width: 769px) {
