@@ -818,6 +818,11 @@ body header .mobile-menu.open {
   gap: 10px;
 }
 
+.flex img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 1028px) {
   .flex {
     -webkit-box-orient: horizontal;
