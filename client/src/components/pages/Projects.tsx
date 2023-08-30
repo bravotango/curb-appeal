@@ -1,16 +1,32 @@
 import React, { useState, FC } from 'react';
-import TJ1 from '../../assets/JeanAndTom/front-before.jpg';
-import TJ2 from '../../assets/JeanAndTom/front-mid.jpg';
-import TJ3 from '../../assets/JeanAndTom/backyard-before.jpg';
-import TJ4 from '../../assets/JeanAndTom/backyard-after.jpg';
-import TJ5 from '../../assets/JeanAndTom/back-looking-at-house-before.jpg';
-import TJ6 from '../../assets/JeanAndTom/back-looking-at-house-after.jpg';
-import tala1 from '../../assets/Tala-sized/gravel-before.jpg';
-import tala2 from '../../assets/Tala-sized/gravel-after.jpg';
-import tala3 from '../../assets/Tala-sized/front-before.jpg';
-import tala4 from '../../assets/Tala-sized/front-after.jpg';
-import tala5 from '../../assets/Tala-sized/back-planters-before.jpg';
-import tala6 from '../../assets/Tala-sized/back-planters-after.jpg';
+import art1 from '../../assets/after/arts-before.jpg';
+import art2 from '../../assets/after/arts-after.jpg';
+import art3 from '../../assets/after/arts2-before.jpg';
+import art4 from '../../assets/after/arts2-after.jpg';
+import strawberries1 from '../../assets/after/strawberries-before.jpg';
+import strawberries2 from '../../assets/after/strawberries-after.jpg';
+import garden1 from '../../assets/after/garden-before.jpg';
+import garden2 from '../../assets/after/garden-after.jpg';
+import george1 from '../../assets/after/george-before.jpg';
+import george2 from '../../assets/after/george-after.jpg';
+import entrance1 from '../../assets/after/JeanJimEntrance-before.jpg';
+import entrance2 from '../../assets/after/JeanJimEntrance-after.jpg';
+import TJ1 from '../../assets/after/front-mid-before.jpg';
+import TJ2 from '../../assets/after/front-mid-after.jpg';
+import TJ3 from '../../assets/after/backyard-before.jpg';
+import TJ4 from '../../assets/after/backyard-after.jpg';
+import TJ5 from '../../assets/after/back-looking-at-house-before.jpg';
+import TJ6 from '../../assets/after/back-looking-at-house-after.jpg';
+import tala1 from '../../assets/after/gravel-before.jpg';
+import tala2 from '../../assets/after/gravel-after.jpg';
+import tala3 from '../../assets/after/front-before.jpg';
+import tala4 from '../../assets/after/front-after.jpg';
+import tala5 from '../../assets/after/back-planters-before.jpg';
+import tala6 from '../../assets/after/back-planters-after.jpg';
+import nina1 from '../../assets/after/nina-before.jpg';
+import nina2 from '../../assets/after/nina-after.jpg';
+import nina3 from '../../assets/after/nina2-before.jpg';
+import nina4 from '../../assets/after/nina2-after.jpg';
 
 interface BeforeAfterProps {
   caption: string;
@@ -72,6 +88,40 @@ const Projects: FC = () => {
             src: TJ6,
           },
         },
+      ],
+    },
+    {
+      title: 'Full yard restoration',
+      hours: 30,
+      photos: [
+        {
+          caption: '',
+          before: { src: strawberries1 },
+          after: { src: strawberries2 },
+        },
+        { caption: '', before: { src: garden1 }, after: { src: garden2 } },
+        { caption: '', before: { src: george1 }, after: { src: george2 } },
+        { caption: '', before: { src: entrance1 }, after: { src: entrance2 } },
+      ],
+    },
+    {
+      title: 'Front yard clean-up',
+      hours: 4,
+      photos: [
+        {
+          caption: '',
+          before: { src: nina1 },
+          after: { src: nina2 },
+        },
+        { caption: '', before: { src: nina3 }, after: { src: nina4 } },
+      ],
+    },
+    {
+      title: 'Courtyard clean-up',
+      hours: 2.5,
+      photos: [
+        { caption: '', before: { src: art1 }, after: { src: art2 } },
+        { caption: '', before: { src: art3 }, after: { src: art4 } },
       ],
     },
     {

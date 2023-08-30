@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@400&family=Overpass&family=Roboto&family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css');
 //variables
 $color-primary: #000;
@@ -334,6 +334,10 @@ strong {
     }
     .disabled {
       color: #7b7b7b;
+    }
+
+    h2 {
+      font-size: larger;
     }
   }
 
