@@ -6,11 +6,7 @@ interface PictureProps {
 }
 
 const PictureComponent: React.FC<PictureProps> = ({ src, alt }) => {
-  return (
-    <div>
-      <img src={src} alt={alt} />
-    </div>
-  );
+  return <img src={src} alt={alt} />;
 };
 
 export default PictureComponent;
