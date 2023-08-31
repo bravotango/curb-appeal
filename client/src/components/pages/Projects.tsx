@@ -108,7 +108,7 @@ const Projects: FC = () => {
           after: { src: garden2 },
         },
         {
-          heading: 'Eagle George',
+          // heading: 'Eagle George',
           caption:
             'I was asked to use rounds displaced from a downed tree to create boundaries around "George", the eagle statue.',
           before: { src: george1 },
@@ -180,33 +180,39 @@ const Projects: FC = () => {
     <div className='projects'>
       <h1>Before & After</h1>
       <div className='fixed'>
-        <h2
-          className={
-            toggleStatus === BeforeAfter.Before ? 'highlight' : 'disabled'
-          }
-          onClick={handleToggle}
-        >
-          Before
-        </h2>
-        <div className='toggle-switch'>
-          <label className='switch'>
-            <input
-              type='checkbox'
-              onChange={handleToggle}
-              checked={toggleStatus === BeforeAfter.After}
-            />{' '}
-            <span className='slider' />
-          </label>
+        <div>
+          <h2
+            className={
+              toggleStatus === BeforeAfter.Before ? 'highlight' : 'disabled'
+            }
+            onClick={handleToggle}
+          >
+            Before
+          </h2>
+          <div className='toggle-switch'>
+            <label className='switch'>
+              <input
+                type='checkbox'
+                onChange={handleToggle}
+                checked={toggleStatus === BeforeAfter.After}
+              />{' '}
+              <span className='slider' />
+            </label>
+          </div>
+          <h2
+            className={
+              toggleStatus === BeforeAfter.After ? 'highlight' : 'disabled'
+            }
+            onClick={handleToggle}
+          >
+            After
+          </h2>
         </div>
-        <h2
-          className={
-            toggleStatus === BeforeAfter.After ? 'highlight' : 'disabled'
-          }
-          onClick={handleToggle}
-        >
-          After
-        </h2>
-        <h2 style={{ float: 'right' }}>Tap pictures to toggle</h2>
+        <div>
+          <h2 style={{ float: 'right' }} onClick={handleToggle}>
+            Tap pics to toggle
+          </h2>
+        </div>
       </div>
 
       <div className='project-list'>
