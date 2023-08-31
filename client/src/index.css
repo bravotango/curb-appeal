@@ -865,15 +865,33 @@ strong {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
+  padding-top: 6px;
   background-color: #000;
   z-index: 1000;
+}
+
+.projects .fixed .flex-item {
+  min-width: 110px;
+  text-align: right;
+}
+
+.projects .fixed div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 
 .projects .fixed .highlight {
@@ -885,7 +903,7 @@ strong {
 }
 
 .projects .fixed h2 {
-  font-size: larger;
+  font-size: 1.25em;
 }
 
 .projects .project-list {
@@ -904,22 +922,39 @@ strong {
 }
 
 .projects .project-container .image-container .card-title {
-  padding: 10px;
   position: absolute;
   width: 100%;
-  bottom: 10%;
+  bottom: 0%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .projects .project-container .image-container .card-title h2 {
+  padding: 0px 10px 0 10px;
   color: #e1a819;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-family: 'Fredericka the Great', cursive;
-  text-transform: lowercase;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .projects .project-container .image-container .card-title p {
   font-size: medium;
+  padding: 0 0 0 10px;
+}
+
+@media screen and (max-width: 1028px) {
+  .projects .project-container .image-container .card-title h2,
+  .projects .project-container .image-container .card-title p {
+    padding: 4px;
+    margin: 4px 0;
+    line-height: 1.5;
+    font-size: 1em;
+  }
 }
 
 .projects .project-container .image-container .card-image {
@@ -938,15 +973,33 @@ strong {
   height: auto;
 }
 
+.toggle {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle h2 {
+  font-family: 'Vollkorn', sans-serif;
+}
+
 .toggle-switch {
   display: inline-block;
 }
 
 .toggle-switch .switch {
   position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 30px;
+  width: 65px;
+  text-align: center;
+}
+
+.toggle-switch .switch span {
+  font-family: 'Vollkorn', sans-serif;
+  width: 65px;
+  position: absolute;
+  top: -22px;
+  left: 0;
+  font-size: 1.05em;
 }
 
 .toggle-switch .switch input {
@@ -960,8 +1013,8 @@ strong {
 }
 
 .toggle-switch .switch input:checked + .slider:before {
-  -webkit-transform: translateX(30px);
-          transform: translateX(30px);
+  -webkit-transform: translateX(44px);
+          transform: translateX(44px);
 }
 
 .toggle-switch .switch .slider {
@@ -980,8 +1033,8 @@ strong {
 .toggle-switch .switch .slider:before {
   position: absolute;
   content: '';
-  height: 26px;
-  width: 26px;
+  height: 18px;
+  width: 18px;
   left: 2px;
   bottom: 2px;
   background-color: white;

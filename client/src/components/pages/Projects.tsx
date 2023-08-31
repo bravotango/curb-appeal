@@ -50,12 +50,16 @@ enum BeforeAfter {
 
 const Projects: FC = () => {
   const [toggleStatus, setToggleStatus] = useState(BeforeAfter.Before);
+  const [captions, setCaptions] = useState(true);
   const handleToggle = () => {
     setToggleStatus(
       toggleStatus === BeforeAfter.After
         ? BeforeAfter.Before
         : BeforeAfter.After
     );
+  };
+  const handleToggleCaptions = () => {
+    setCaptions(!captions);
   };
   const projects: ProjectProps[] = [
     {
@@ -164,6 +168,7 @@ const Projects: FC = () => {
           },
         },
         {
+          heading: 'Access to raised beds',
           caption: 'Removed all weeds and vegetation around raised beds',
           before: {
             src: tala5,
@@ -180,7 +185,7 @@ const Projects: FC = () => {
     <div className='projects'>
       <h1>Before & After</h1>
       <div className='fixed'>
-        <div>
+        <div className='toggle'>
           <h2
             className={
               toggleStatus === BeforeAfter.Before ? 'highlight' : 'disabled'
@@ -191,6 +196,7 @@ const Projects: FC = () => {
           </h2>
           <div className='toggle-switch'>
             <label className='switch'>
+              <span>Photos</span>
               <input
                 type='checkbox'
                 onChange={handleToggle}
@@ -208,11 +214,42 @@ const Projects: FC = () => {
             After
           </h2>
         </div>
-        <div>
-          <h2 style={{ float: 'right' }} onClick={handleToggle}>
-            Tap pics to toggle
+
+        <div className='toggle'>
+          <h2
+            className={!captions ? 'highlight' : 'disabled'}
+            onClick={handleToggleCaptions}
+          >
+            Off
+          </h2>
+          <div className='toggle-switch'>
+            <label className='switch'>
+              <span>Captions</span>
+              <input
+                type='checkbox'
+                onChange={handleToggleCaptions}
+                checked={captions === true}
+              />{' '}
+              <span className='slider' />
+            </label>
+          </div>
+          <h2
+            className={captions ? 'highlight' : 'disabled'}
+            onClick={handleToggleCaptions}
+          >
+            On
           </h2>
         </div>
+
+        {/* <div className='flex-item'>
+          <a
+            onClick={() => {
+              setCaptions(!captions);
+            }}
+          >
+            {captions ? 'Hide' : 'Show'} captions
+          </a>
+        </div> */}
       </div>
 
       <div className='project-list'>
@@ -254,10 +291,15 @@ const Projects: FC = () => {
                       }}
                     />
                   </div>
-                  <span className='card-title'>
-                    <h2>{project.title}</h2> <p>{photo.heading}</p>
-                    <p>{photo.caption}</p>
-                  </span>
+                  {captions && (
+                    <span className='card-title'>
+                      <h2>
+                        <span>{project.title}</span>
+                      </h2>{' '}
+                      <p>{photo.heading}</p>
+                      <p>{photo.caption}</p>
+                    </span>
+                  )}
                 </div>
               </div>
             ))}

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/curb-appeal/static/css/main.8803f3bf.css",
-    "main.js": "/curb-appeal/static/js/main.a35f649b.js",
+    "main.css": "/curb-appeal/static/css/main.800c08ea.css",
+    "main.js": "/curb-appeal/static/js/main.0a9e1f4c.js",
     "static/js/787.dbdaf0c6.chunk.js": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js",
     "static/media/front-before.jpg": "/curb-appeal/static/media/front-before.6a4a9a15ea646a6a2c4b.jpg",
     "static/media/JeanJimEntrance-before.jpg": "/curb-appeal/static/media/JeanJimEntrance-before.b5719e3fb4b083aa0bfe.jpg",
@@ -34,12 +34,12 @@
     "static/media/curb-appeal.png": "/curb-appeal/static/media/curb-appeal.0688ee370fbba53cfef2.png",
     "static/media/landscapesIcons.png": "/curb-appeal/static/media/landscapesIcons.e63cf218490f2085b36e.png",
     "index.html": "/curb-appeal/index.html",
-    "main.8803f3bf.css.map": "/curb-appeal/static/css/main.8803f3bf.css.map",
-    "main.a35f649b.js.map": "/curb-appeal/static/js/main.a35f649b.js.map",
+    "main.800c08ea.css.map": "/curb-appeal/static/css/main.800c08ea.css.map",
+    "main.0a9e1f4c.js.map": "/curb-appeal/static/js/main.0a9e1f4c.js.map",
     "787.dbdaf0c6.chunk.js.map": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8803f3bf.css",
-    "static/js/main.a35f649b.js"
+    "static/css/main.800c08ea.css",
+    "static/js/main.0a9e1f4c.js"
   ]
 }
