@@ -29,6 +29,7 @@ import nina3 from '../../assets/after/nina2-before.jpg';
 import nina4 from '../../assets/after/nina2-after.jpg';
 
 interface BeforeAfterProps {
+  heading?: string;
   caption: string;
   before: PictureProps;
   after: PictureProps;
@@ -62,7 +63,10 @@ const Projects: FC = () => {
       hours: 50,
       photos: [
         {
-          caption: 'Carved out wanted vegetation & redefined rock borders',
+          heading: '',
+
+          caption:
+            'Remove weeds, carve out wanted vegetation & redefined rock beds',
 
           before: {
             src: TJ1,
@@ -72,8 +76,7 @@ const Projects: FC = () => {
           },
         },
         {
-          caption:
-            'Cleared all weeds down fence line and start defining back lawn borders',
+          caption: 'Clear weeds down fence line prepping for landscaping',
           before: {
             src: TJ3,
           },
@@ -82,7 +85,7 @@ const Projects: FC = () => {
           },
         },
         {
-          caption: 'Dug backyard down to dirt, prepping for landscaping',
+          caption: 'Dig backyard down to dirt, prepping for landscaping',
           before: { src: TJ5 },
           after: {
             src: TJ6,
@@ -95,21 +98,32 @@ const Projects: FC = () => {
       hours: 30,
       photos: [
         {
-          caption: '',
+          caption: 'Weed & save strawberry rows',
           before: { src: strawberries1 },
           after: { src: strawberries2 },
         },
-        { caption: '', before: { src: garden1 }, after: { src: garden2 } },
-        { caption: '', before: { src: george1 }, after: { src: george2 } },
+        {
+          caption: 'Clean up, simplify, yard art',
+          before: { src: garden1 },
+          after: { src: garden2 },
+        },
+        {
+          heading: 'Eagle George',
+          caption:
+            'I was asked to use rounds displaced from a downed tree to create boundaries around "George", the eagle statue.',
+          before: { src: george1 },
+          after: { src: george2 },
+        },
         { caption: '', before: { src: entrance1 }, after: { src: entrance2 } },
       ],
     },
     {
-      title: 'Front yard clean-up',
+      title: 'Clean up the rocks',
       hours: 4,
       photos: [
         {
-          caption: '',
+          caption:
+            'Requested to weed within and around and keep growth of grasses',
           before: { src: nina1 },
           after: { src: nina2 },
         },
@@ -130,7 +144,7 @@ const Projects: FC = () => {
       photos: [
         {
           caption:
-            'Removed weeds from gravel, cleared raised beds, defined plants & new gravel',
+            'Remove weeds from gravel, clear raised beds, redefine plant borders & carry in new gravel',
 
           before: {
             src: tala1,
@@ -141,7 +155,7 @@ const Projects: FC = () => {
         },
         {
           caption:
-            'Removed weeds and trimmed plants, chainsaw unwanted pear tree.',
+            'Remove weeds, clear raised beds, trim plants, restore gravel.',
           before: {
             src: tala3,
           },
@@ -192,7 +206,9 @@ const Projects: FC = () => {
         >
           After
         </h2>
+        <h2 style={{ float: 'right' }}>Tap pictures to toggle</h2>
       </div>
+
       <div className='project-list'>
         {projects.map((project, i) => (
           <div key={i}>
@@ -209,6 +225,7 @@ const Projects: FC = () => {
                       toggleStatus === BeforeAfter.Before ? 'active' : ''
                     }`}
                   >
+                    {photo.heading}
                     <img
                       alt={photo.caption}
                       src={photo.before.src}
@@ -216,9 +233,6 @@ const Projects: FC = () => {
                         opacity: toggleStatus === BeforeAfter.Before ? 1 : 0,
                       }}
                     />
-                    {/* <span className='card-title'>
-                    <h2 className='title1 shadow'>ANA</h2>
-                  </span> */}
                   </div>
 
                   <div
@@ -234,6 +248,10 @@ const Projects: FC = () => {
                       }}
                     />
                   </div>
+                  <span className='card-title'>
+                    <h2>{project.title}</h2> <p>{photo.heading}</p>
+                    <p>{photo.caption}</p>
+                  </span>
                 </div>
               </div>
             ))}

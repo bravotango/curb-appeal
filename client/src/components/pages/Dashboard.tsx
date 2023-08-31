@@ -80,7 +80,7 @@ const Dashboard: React.FC = () => {
           </p>
         </div>
       </div>
-      {/* <div className='box'>
+      <div className='box'>
         <div className='badge'>
           <small>starting at</small>
           $69.99
@@ -107,11 +107,11 @@ const Dashboard: React.FC = () => {
           dirt, grime, stains, mold, and mildew, leaving your driveways,
           sidewalks, patios, and other hard surfaces clean and rejuvenated.
         </p>
-      </div> */}
+      </div>
       <div className='box'>
         <div className='badge'>
           <small>starting at</small>
-          $89.99/hr
+          $99.99
           <small>+tax</small>
         </div>
         <h2>Landscapes</h2>
@@ -120,8 +120,8 @@ const Dashboard: React.FC = () => {
           Elevate your outdoor space with Curb Appeal's personalized landscape
           design and installation. We bring your vision to life, creating a
           stunning and functional environment that reflects your style. From
-          vibrant flower beds to beautiful stone work and retaining walls, we
-          tailor every detail to your preferences.
+          vibrant flower beds to beautiful stone work and retaining walls,
+          tailoring every detail to your preferences.
         </p>
       </div>
     </div>
