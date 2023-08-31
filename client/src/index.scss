@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap&family=Fredericka+the+Great');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css');
 //variables
 $color-primary: #000;
@@ -353,10 +353,30 @@ strong {
     width: 100%;
 
     .image-container {
+      position: relative;
+
       width: 100%;
       margin-bottom: 10px; /* Add spacing between images */
+      .card-title {
+        padding: 10px;
+        h2 {
+          color: $color-secondary;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          font-family: 'Fredericka the Great', cursive;
+          text-transform: lowercase;
+        }
+        p {
+          font-size: medium;
+        }
+        position: absolute;
 
+        width: 100%;
+        bottom: 10%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
       .card-image {
+        position: relative;
+
         width: 100%;
         height: 100%;
         display: none;
