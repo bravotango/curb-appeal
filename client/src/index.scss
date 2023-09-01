@@ -416,22 +416,17 @@ strong {
   }
 }
 .toggle {
+  font-family: 'Oswald', sans-serif;
   align-items: center;
-  h2 {
-    font-family: 'Vollkorn', sans-serif;
-  }
 }
 .toggle-switch {
   display: inline-block;
 
   .switch {
     position: relative;
-
     width: 65px;
-
     text-align: center;
     span {
-      font-family: 'Vollkorn', sans-serif;
       width: 65px;
       position: absolute;
       top: -22px;

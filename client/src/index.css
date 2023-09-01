@@ -974,13 +974,10 @@ strong {
 }
 
 .toggle {
+  font-family: 'Oswald', sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.toggle h2 {
-  font-family: 'Vollkorn', sans-serif;
 }
 
 .toggle-switch {
@@ -994,7 +991,6 @@ strong {
 }
 
 .toggle-switch .switch span {
-  font-family: 'Vollkorn', sans-serif;
   width: 65px;
   position: absolute;
   top: -22px;
