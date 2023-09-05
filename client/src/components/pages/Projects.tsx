@@ -67,10 +67,10 @@ const Projects: FC = () => {
       hours: 50,
       photos: [
         {
-          heading: '',
+          heading: 'Carve out weeds',
 
           caption:
-            'Remove weeds, carve out wanted vegetation & redefined rock beds',
+            'Remove weeds, carve out wanted vegetation & redefine rock beds',
 
           before: {
             src: TJ1,
@@ -80,6 +80,7 @@ const Projects: FC = () => {
           },
         },
         {
+          heading: 'Clear weeds',
           caption: 'Clear weeds down fence line prepping for landscaping',
           before: {
             src: TJ3,
@@ -89,6 +90,7 @@ const Projects: FC = () => {
           },
         },
         {
+          heading: 'Dig out roots',
           caption: 'Dig backyard down to dirt, prepping for landscaping',
           before: { src: TJ5 },
           after: {
@@ -102,23 +104,30 @@ const Projects: FC = () => {
       hours: 30,
       photos: [
         {
+          heading: 'Clear & mulch',
           caption: 'Weed & save strawberry rows',
           before: { src: strawberries1 },
           after: { src: strawberries2 },
         },
         {
+          heading: 'Clean & simplify',
           caption: 'Clean up, simplify, yard art',
           before: { src: garden1 },
           after: { src: garden2 },
         },
         {
-          // heading: 'Eagle George',
+          heading: 'Eagle George',
           caption:
-            'I was asked to use rounds displaced from a downed tree to create boundaries around "George", the eagle statue.',
+            'Used tree rounds to create borders for "George," the eagle statue.',
           before: { src: george1 },
           after: { src: george2 },
         },
-        { caption: '', before: { src: entrance1 }, after: { src: entrance2 } },
+        {
+          heading: 'Weed & mulch',
+          caption: 'Weeded and spread red mulch to suppress weeds.',
+          before: { src: entrance1 },
+          after: { src: entrance2 },
+        },
       ],
     },
     {
@@ -126,20 +135,36 @@ const Projects: FC = () => {
       hours: 4,
       photos: [
         {
+          heading: 'Clean up the rocks',
           caption:
             'Requested to weed within and around and keep growth of grasses',
           before: { src: nina1 },
           after: { src: nina2 },
         },
-        { caption: '', before: { src: nina3 }, after: { src: nina4 } },
+        {
+          heading: 'Corner Fern',
+          caption: 'Chop out the dead and weed all around',
+          before: { src: nina3 },
+          after: { src: nina4 },
+        },
       ],
     },
     {
       title: 'Courtyard clean-up',
       hours: 2.5,
       photos: [
-        { caption: '', before: { src: art1 }, after: { src: art2 } },
-        { caption: '', before: { src: art3 }, after: { src: art4 } },
+        {
+          heading: 'Remove the dead',
+          caption: 'Remove dead vegetation and power wash area',
+          before: { src: art1 },
+          after: { src: art2 },
+        },
+        {
+          heading: 'Power wash',
+          caption: 'Remove weeds, power wash outdoor furniture and mats',
+          before: { src: art3 },
+          after: { src: art4 },
+        },
       ],
     },
     {
@@ -147,6 +172,7 @@ const Projects: FC = () => {
       hours: 30,
       photos: [
         {
+          heading: 'Weed & gravel',
           caption:
             'Remove weeds from gravel, clear raised beds, redefine plant borders & carry in new gravel',
 
@@ -158,6 +184,7 @@ const Projects: FC = () => {
           },
         },
         {
+          heading: 'Weeding it',
           caption:
             'Remove weeds, clear raised beds, trim plants, restore gravel.',
           before: {
@@ -168,7 +195,7 @@ const Projects: FC = () => {
           },
         },
         {
-          heading: 'Access to raised beds',
+          heading: 'Access raised beds',
           caption: 'Removed all weeds and vegetation around raised beds',
           before: {
             src: tala5,
@@ -185,71 +212,64 @@ const Projects: FC = () => {
     <div className='projects'>
       <h1>Before & After</h1>
       <div className='fixed'>
-        <div className='toggle'>
-          <h2
-            className={
-              toggleStatus === BeforeAfter.Before ? 'highlight' : 'disabled'
-            }
-            onClick={handleToggle}
-          >
-            Before
-          </h2>
-          <div className='toggle-switch'>
-            <label className='switch'>
-              <span>Photos</span>
-              <input
-                type='checkbox'
-                onChange={handleToggle}
-                checked={toggleStatus === BeforeAfter.After}
-              />{' '}
-              <span className='slider' />
-            </label>
+        <fieldset>
+          <caption>Photos</caption>
+          <div className='toggle'>
+            <span
+              className={
+                toggleStatus === BeforeAfter.Before ? 'highlight' : 'disabled'
+              }
+              onClick={handleToggle}
+            >
+              Before
+            </span>
+            <div className='toggle-switch'>
+              <label className='switch'>
+                <input
+                  type='checkbox'
+                  onChange={handleToggle}
+                  checked={toggleStatus === BeforeAfter.After}
+                />{' '}
+                <span className='slider' />
+              </label>
+            </div>
+            <span
+              className={
+                toggleStatus === BeforeAfter.After ? 'highlight' : 'disabled'
+              }
+              onClick={handleToggle}
+            >
+              After
+            </span>
           </div>
-          <h2
-            className={
-              toggleStatus === BeforeAfter.After ? 'highlight' : 'disabled'
-            }
-            onClick={handleToggle}
-          >
-            After
-          </h2>
-        </div>
-
-        <div className='toggle'>
-          <h2
-            className={!captions ? 'highlight' : 'disabled'}
-            onClick={handleToggleCaptions}
-          >
-            Off
-          </h2>
-          <div className='toggle-switch'>
-            <label className='switch'>
-              <span>Captions</span>
-              <input
-                type='checkbox'
-                onChange={handleToggleCaptions}
-                checked={captions === true}
-              />{' '}
-              <span className='slider' />
-            </label>
+        </fieldset>
+        <fieldset>
+          <caption>Captions</caption>
+          <div className='toggle'>
+            <span
+              className={!captions ? 'highlight' : 'disabled'}
+              onClick={handleToggleCaptions}
+            >
+              Off
+            </span>
+            <div className='toggle-switch'>
+              <label className='switch'>
+                <input
+                  type='checkbox'
+                  onChange={handleToggleCaptions}
+                  checked={captions === true}
+                />{' '}
+                <span className='slider' />
+              </label>
+            </div>
+            <span
+              className={captions ? 'highlight' : 'disabled'}
+              onClick={handleToggleCaptions}
+            >
+              On
+            </span>
           </div>
-          <h2
-            className={captions ? 'highlight' : 'disabled'}
-            onClick={handleToggleCaptions}
-          >
-            On
-          </h2>
-        </div>
-
-        {/* <div className='flex-item'>
-          <a
-            onClick={() => {
-              setCaptions(!captions);
-            }}
-          >
-            {captions ? 'Hide' : 'Show'} captions
-          </a>
-        </div> */}
+        </fieldset>
       </div>
 
       <div className='project-list'>
@@ -268,7 +288,6 @@ const Projects: FC = () => {
                       toggleStatus === BeforeAfter.Before ? 'active' : ''
                     }`}
                   >
-                    {photo.heading}
                     <img
                       alt={photo.caption}
                       src={photo.before.src}
@@ -294,9 +313,8 @@ const Projects: FC = () => {
                   {captions && (
                     <span className='card-title'>
                       <h2>
-                        <span>{project.title}</span>
+                        <span>{photo.heading}</span>
                       </h2>{' '}
-                      <p>{photo.heading}</p>
                       <p>{photo.caption}</p>
                     </span>
                   )}
