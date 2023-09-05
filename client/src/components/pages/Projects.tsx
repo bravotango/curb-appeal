@@ -70,7 +70,7 @@ const Projects: FC = () => {
           heading: 'Carve out weeds',
 
           caption:
-            'Remove weeds, carve out wanted vegetation & redefine rock beds',
+            'Clear weeds, restore desired plants, and redefine rock beds to highlight their beauty',
 
           before: {
             src: TJ1,
@@ -137,13 +137,13 @@ const Projects: FC = () => {
         {
           heading: 'Clean up the rocks',
           caption:
-            'Requested to weed within and around and keep growth of grasses',
+            'Requested to weed inside and around while maintaining grass growth',
           before: { src: nina1 },
           after: { src: nina2 },
         },
         {
           heading: 'Corner Fern',
-          caption: 'Chop out the dead and weed all around',
+          caption: 'Trim away dead parts of fern and weed the surrounding area',
           before: { src: nina3 },
           after: { src: nina4 },
         },
@@ -174,7 +174,7 @@ const Projects: FC = () => {
         {
           heading: 'Weed & gravel',
           caption:
-            'Remove weeds from gravel, clear raised beds, redefine plant borders & carry in new gravel',
+            'Clear weeds from gravel & beds, redefine borders, and add new gravel',
 
           before: {
             src: tala1,
@@ -185,8 +185,7 @@ const Projects: FC = () => {
         },
         {
           heading: 'Weeding it',
-          caption:
-            'Remove weeds, clear raised beds, trim plants, restore gravel.',
+          caption: 'Remove weeds, simplify area, rake and blow.',
           before: {
             src: tala3,
           },
