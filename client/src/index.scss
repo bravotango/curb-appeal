@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap&family=Fredericka+the+Great');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&?family=PT+Sans+Narrow&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap&family=Fredericka+the+Great');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css');
 //variables
 $color-primary: #000;
@@ -308,7 +308,6 @@ body {
   }
 
   .text-content {
-    flex: 1.5;
     p {
       margin: 0;
     }
@@ -332,7 +331,7 @@ strong {
     position: sticky;
     top: 0;
     width: 100%;
-    padding-top: 6px;
+    padding: 6px 0;
     background-color: $color-primary; // Adjust as needed
     z-index: 1000; // Adjust as needed
     .flex-item {
@@ -352,7 +351,7 @@ strong {
     }
 
     h2 {
-      font-size: 1.25em;
+      font-size: 1em;
     }
   }
 
@@ -415,6 +414,19 @@ strong {
     }
   }
 }
+fieldset {
+  margin: 6px 0;
+  padding: 6px;
+  border-radius: 6px;
+  caption {
+    margin-top: -16px;
+    background-color: black;
+    padding: 0 2px;
+  }
+  @media screen and (min-width: 1028px) {
+    margin: 20px 0;
+  }
+}
 .toggle {
   font-family: 'Oswald', sans-serif;
   align-items: center;
@@ -424,14 +436,14 @@ strong {
 
   .switch {
     position: relative;
-    width: 65px;
+    width: 45px;
     text-align: center;
     span {
-      width: 65px;
+      width: 45px;
       position: absolute;
-      top: -22px;
+      top: -16px;
       left: 0;
-      font-size: 1.05em;
+      font-size: 0.1em;
     }
     input {
       opacity: 0;
@@ -441,7 +453,7 @@ strong {
         background-color: $color-secondary; // Active color
       }
       &:checked + .slider:before {
-        transform: translateX(44px); // Move the knob to the right
+        transform: translateX(21px); // Move the knob to the right
       }
     }
     .slider {
@@ -457,8 +469,8 @@ strong {
       &:before {
         position: absolute;
         content: '';
-        height: 18px;
-        width: 18px;
+        height: 20px;
+        width: 20px;
         left: 2px;
         bottom: 2px;
         background-color: white;

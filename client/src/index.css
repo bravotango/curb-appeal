@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap&family=Fredericka+the+Great");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&?family=PT+Sans+Narrow&family=Bebas+Neue&family=Oswald:wght@500&family=Overpass&family=Roboto&family=Vollkorn&display=swap&family=Fredericka+the+Great");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css");
 .icon-1 {
   width: 34px;
@@ -835,12 +835,6 @@ body header .mobile-menu.open {
   }
 }
 
-.flex .text-content {
-  -webkit-box-flex: 1.5;
-      -ms-flex: 1.5;
-          flex: 1.5;
-}
-
 .flex .text-content p {
   margin: 0;
 }
@@ -874,7 +868,7 @@ strong {
   position: sticky;
   top: 0;
   width: 100%;
-  padding-top: 6px;
+  padding: 6px 0;
   background-color: #000;
   z-index: 1000;
 }
@@ -903,7 +897,7 @@ strong {
 }
 
 .projects .fixed h2 {
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .projects .project-list {
@@ -973,6 +967,24 @@ strong {
   height: auto;
 }
 
+fieldset {
+  margin: 6px 0;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+fieldset caption {
+  margin-top: -16px;
+  background-color: black;
+  padding: 0 2px;
+}
+
+@media screen and (min-width: 1028px) {
+  fieldset {
+    margin: 20px 0;
+  }
+}
+
 .toggle {
   font-family: 'Oswald', sans-serif;
   -webkit-box-align: center;
@@ -986,16 +998,16 @@ strong {
 
 .toggle-switch .switch {
   position: relative;
-  width: 65px;
+  width: 45px;
   text-align: center;
 }
 
 .toggle-switch .switch span {
-  width: 65px;
+  width: 45px;
   position: absolute;
-  top: -22px;
+  top: -16px;
   left: 0;
-  font-size: 1.05em;
+  font-size: 0.1em;
 }
 
 .toggle-switch .switch input {
@@ -1009,8 +1021,8 @@ strong {
 }
 
 .toggle-switch .switch input:checked + .slider:before {
-  -webkit-transform: translateX(44px);
-          transform: translateX(44px);
+  -webkit-transform: translateX(21px);
+          transform: translateX(21px);
 }
 
 .toggle-switch .switch .slider {
@@ -1029,8 +1041,8 @@ strong {
 .toggle-switch .switch .slider:before {
   position: absolute;
   content: '';
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   left: 2px;
   bottom: 2px;
   background-color: white;
