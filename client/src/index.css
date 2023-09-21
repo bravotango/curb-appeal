@@ -522,7 +522,7 @@ body p {
 body .tagline {
   font-family: 'Vollkorn', serif;
   text-transform: uppercase;
-  color: #7b7b7b;
+  color: #fff;
   font-size: large;
   display: -webkit-box;
   display: -ms-flexbox;
