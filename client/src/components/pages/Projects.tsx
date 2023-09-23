@@ -68,36 +68,6 @@ const Projects: FC = () => {
   };
   const projects: ProjectProps[] = [
     {
-      title: 'Older plants, move back their growth',
-      hours: 50,
-      photos: [
-        {
-          heading: 'Clean out weeds',
-
-          caption:
-            'Revitalize the landscape: weed removal, shrub enhancement, and rock redefinition for natural beauty.',
-
-          before: {
-            src: colleen1,
-          },
-          after: {
-            src: colleen2,
-          },
-        },
-        {
-          heading: 'Tame Rhododendrons',
-          caption:
-            'Enhance rhododendrons through pruning and removing dead branches and unhealthy leaves.',
-          before: {
-            src: colleen3,
-          },
-          after: {
-            src: colleen4,
-          },
-        },
-      ],
-    },
-    {
       title: 'Deep weeding',
       hours: 50,
       photos: [
@@ -130,6 +100,36 @@ const Projects: FC = () => {
           before: { src: TJ5 },
           after: {
             src: TJ6,
+          },
+        },
+      ],
+    },
+    {
+      title: 'Older plants, move back their growth',
+      hours: 50,
+      photos: [
+        {
+          heading: 'Clean out weeds',
+
+          caption:
+            'Revitalize the landscape: weed removal, shrub enhancement, and rock redefinition for natural beauty.',
+
+          before: {
+            src: colleen1,
+          },
+          after: {
+            src: colleen2,
+          },
+        },
+        {
+          heading: 'Tame Rhododendrons',
+          caption:
+            'Enhance rhododendrons through pruning and removing dead branches and unhealthy leaves.',
+          before: {
+            src: colleen3,
+          },
+          after: {
+            src: colleen4,
           },
         },
       ],
