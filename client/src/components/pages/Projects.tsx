@@ -28,6 +28,11 @@ import nina2 from '../../assets/after/nina-after.jpg';
 import nina3 from '../../assets/after/nina2-before.jpg';
 import nina4 from '../../assets/after/nina2-after.jpg';
 
+import colleen1 from '../../assets/colleen/front-gravel-before.jpg';
+import colleen2 from '../../assets/colleen/front-gravel-after.jpg';
+import colleen3 from '../../assets/colleen/front-rhodies-before.jpg';
+import colleen4 from '../../assets/colleen/front-rhodies-after.jpg';
+
 interface BeforeAfterProps {
   heading?: string;
   caption: string;
@@ -95,6 +100,36 @@ const Projects: FC = () => {
           before: { src: TJ5 },
           after: {
             src: TJ6,
+          },
+        },
+      ],
+    },
+    {
+      title: 'Older plants, move back their growth',
+      hours: 50,
+      photos: [
+        {
+          heading: 'Clean out weeds',
+
+          caption:
+            'Revitalize the landscape: weed removal, shrub enhancement, and rock redefinition for natural beauty.',
+
+          before: {
+            src: colleen1,
+          },
+          after: {
+            src: colleen2,
+          },
+        },
+        {
+          heading: 'Tame Rhododendrons',
+          caption:
+            'Enhance rhododendrons through pruning and removing dead branches and unhealthy leaves.',
+          before: {
+            src: colleen3,
+          },
+          after: {
+            src: colleen4,
           },
         },
       ],
