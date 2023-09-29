@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/curb-appeal/static/css/main.9cb8d30b.css",
-    "main.js": "/curb-appeal/static/js/main.87972d49.js",
+    "main.js": "/curb-appeal/static/js/main.f0ea0fa1.js",
     "static/js/787.dbdaf0c6.chunk.js": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js",
     "static/media/front-before.jpg": "/curb-appeal/static/media/front-before.6a4a9a15ea646a6a2c4b.jpg",
     "static/media/JeanJimEntrance-before.jpg": "/curb-appeal/static/media/JeanJimEntrance-before.b5719e3fb4b083aa0bfe.jpg",
@@ -39,11 +39,11 @@
     "static/media/landscapesIcons.png": "/curb-appeal/static/media/landscapesIcons.e63cf218490f2085b36e.png",
     "index.html": "/curb-appeal/index.html",
     "main.9cb8d30b.css.map": "/curb-appeal/static/css/main.9cb8d30b.css.map",
-    "main.87972d49.js.map": "/curb-appeal/static/js/main.87972d49.js.map",
+    "main.f0ea0fa1.js.map": "/curb-appeal/static/js/main.f0ea0fa1.js.map",
     "787.dbdaf0c6.chunk.js.map": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9cb8d30b.css",
-    "static/js/main.87972d49.js"
+    "static/js/main.f0ea0fa1.js"
   ]
 }
