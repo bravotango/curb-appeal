@@ -1,10 +1,14 @@
 {
   "files": {
     "main.css": "/curb-appeal/static/css/main.9cb8d30b.css",
-    "main.js": "/curb-appeal/static/js/main.764dc7a8.js",
+    "main.js": "/curb-appeal/static/js/main.87972d49.js",
     "static/js/787.dbdaf0c6.chunk.js": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js",
     "static/media/front-before.jpg": "/curb-appeal/static/media/front-before.6a4a9a15ea646a6a2c4b.jpg",
     "static/media/JeanJimEntrance-before.jpg": "/curb-appeal/static/media/JeanJimEntrance-before.b5719e3fb4b083aa0bfe.jpg",
+    "static/media/front-gravel-before.jpg": "/curb-appeal/static/media/front-gravel-before.6ee0987bacda027d0425.jpg",
+    "static/media/front-gravel-after.jpg": "/curb-appeal/static/media/front-gravel-after.84a3e5f11d21643c8ae7.jpg",
+    "static/media/front-rhodies-after.jpg": "/curb-appeal/static/media/front-rhodies-after.af7e869e5b894e98bd75.jpg",
+    "static/media/front-rhodies-before.jpg": "/curb-appeal/static/media/front-rhodies-before.0f29a53bb0c2f416f30e.jpg",
     "static/media/arts-before.jpg": "/curb-appeal/static/media/arts-before.b10c2064256f38bf6573.jpg",
     "static/media/nina2-before.jpg": "/curb-appeal/static/media/nina2-before.2d0f89ecaf91c1a4262d.jpg",
     "static/media/garden-before.jpg": "/curb-appeal/static/media/garden-before.dc22abdf89d2f166f05f.jpg",
@@ -35,11 +39,11 @@
     "static/media/landscapesIcons.png": "/curb-appeal/static/media/landscapesIcons.e63cf218490f2085b36e.png",
     "index.html": "/curb-appeal/index.html",
     "main.9cb8d30b.css.map": "/curb-appeal/static/css/main.9cb8d30b.css.map",
-    "main.764dc7a8.js.map": "/curb-appeal/static/js/main.764dc7a8.js.map",
+    "main.87972d49.js.map": "/curb-appeal/static/js/main.87972d49.js.map",
     "787.dbdaf0c6.chunk.js.map": "/curb-appeal/static/js/787.dbdaf0c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9cb8d30b.css",
-    "static/js/main.764dc7a8.js"
+    "static/js/main.87972d49.js"
   ]
 }

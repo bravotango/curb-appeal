@@ -111,7 +111,7 @@ const Dashboard: React.FC = () => {
       <div className='box'>
         <div className='badge'>
           <small>starting at</small>
-          $99.99
+          $79.99
           <small>+tax</small>
         </div>
         <h2>Landscapes</h2>
